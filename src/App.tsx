@@ -45,16 +45,16 @@ export default function App() {
 
               {/* H1 Main Title */}
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
-                Anticípate a la Falla.{' '}
+                Decisiones Proactivas.{' '}
                 <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent underline decoration-cyan-500/20 underline-offset-4">
                   Mantenimiento Predictivo
                 </span>{' '}
-                con IA para Flotas Marítimas.
+                para Flotas Marítimas.
               </h1>
 
               {/* Subtitle */}
               <p className="text-slate-350 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
-                Monitoreo en tiempo real de motores diésel marinos <strong className="text-slate-100 font-semibold">principales y auxiliares</strong>. Detectamos desgaste y anomalías térmicas antes de que ocurra una avería en altamar.
+                Aprovechamos datos en tiempo real y análisis avanzados para determinar el momento óptimo de mantenimiento. Identificamos desviaciones operativas en motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para evitar paradas imprevistas en altamar.
               </p>
 
               {/* Actions CTAs */}
