@@ -1,7 +1,5 @@
 ---
 deployment:
   tasks:
-    # ⚠️ REEMPLAZA 'TU_USUARIO_CPANEL' por tu usuario real de cPanel
-    # ⚠️ REEMPLAZA 'predictivo' por la subcarpeta destino, o quítala si vas directo a public_html
-    - export DEPLOYPATH=/home/TU_USUARIO_CPANEL/public_html/predictivo
+    - export DEPLOYPATH=/home/simarpne/mant-predictivo.simarp.net
     - /bin/cp -R dist/* $DEPLOYPATH
