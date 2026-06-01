@@ -284,8 +284,9 @@ export default function App() {
             >
               {/* Close Button */}
               <button
+                type="button"
                 onClick={() => setIsSimulatorOpen(false)}
-                className="absolute top-4 right-4 bg-slate-950 hover:bg-slate-800 border border-slate-850 hover:border-slate-800 text-slate-400 hover:text-white px-3 py-1.5 rounded-sm cursor-pointer z-50 font-mono text-[10px] font-bold uppercase transition-colors"
+                className="absolute top-4 right-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-slate-800 text-slate-400 hover:text-white px-3 py-1.5 rounded-sm cursor-pointer z-50 font-mono text-[10px] font-bold uppercase transition-colors"
               >
                 ✕ Cerrar Consola
               </button>

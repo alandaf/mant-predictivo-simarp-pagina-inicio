@@ -14,7 +14,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
       description: 'Notificaciones instantáneas vía WhatsApp y Email para jefes de máquinas en altamar y superintendentes de mantenimiento en tierra, con diagnósticos claros y estimación de tiempo operacional seguro.',
       accent: 'WhatsApp & Email',
       icon: MessageSquare,
-      color: 'text-cyan-450',
+      color: 'text-cyan-400',
       bg: 'bg-cyan-500/15'
     },
     {
@@ -64,7 +64,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
                   <div className="space-y-5">
                     {/* Icon & Label */}
                     <div className="flex justify-between items-center">
-                      <div className={`${benefit.bg} ${benefit.color} p-3 rounded-sm border border-slate-850`}>
+                      <div className={`${benefit.bg} ${benefit.color} p-3 rounded-sm border border-slate-800`}>
                         <IconComponent className="w-5 h-5" />
                       </div>
                       <span className="text-[10px] font-mono text-slate-500 font-bold uppercase tracking-wider bg-slate-950 px-2.5 py-1 rounded-sm border border-slate-900">
@@ -81,7 +81,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-slate-950 flex items-center gap-1 text-slate-350 font-mono text-xs group-hover:text-cyan-400 transition-colors duration-150 cursor-pointer font-bold uppercase tracking-wider" onClick={onContactClick}>
+                  <div className="mt-6 pt-4 border-t border-slate-950 flex items-center gap-1 text-slate-300 font-mono text-xs group-hover:text-cyan-400 transition-colors duration-150 cursor-pointer font-bold uppercase tracking-wider" onClick={onContactClick}>
                     <span>Ver Demo del Dashboard</span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400" />
                   </div>
@@ -114,7 +114,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
               Ingeniería Informática aplicada al rigor del mar.
             </h2>
 
-            <p className="text-slate-355 text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               Desarrollamos soluciones enfocadas en modelar la física de la sala de máquinas. Analizamos las vibraciones, presiones y flujos térmicos para simular condiciones operativas reales y entrenar modelos de IA.
             </p>
 
@@ -139,7 +139,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
           </div>
 
           {/* Testimonial / Credibility Stat Block (Col 5) */}
-          <div className="lg:col-span-5 bg-slate-950/70 p-6 rounded-sm border border-slate-850 flex flex-col justify-between h-full space-y-6">
+          <div className="lg:col-span-5 bg-slate-950/70 p-6 rounded-sm border border-slate-800 flex flex-col justify-between h-full space-y-6">
             <div className="space-y-4">
               <span className="text-[10px] font-mono uppercase text-cyan-400 font-bold tracking-widest bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
                 Demostrador Tecnológico
