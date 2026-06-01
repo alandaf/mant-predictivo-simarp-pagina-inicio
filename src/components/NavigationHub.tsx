@@ -11,6 +11,18 @@ interface NavigationHubProps {
 export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
   const platforms = [
     {
+      title: 'Simulador SmartProp ASD',
+      subtitle: 'CONSOLA DE CONTROL INTERACTIVA',
+      description: 'Interactúa con los mandos de propulsión azimutal J1939, regula la carga del remolcador e inyecta fallas simuladas (como fallas en cilindro #8) para entrenamiento y calibración naval.',
+      icon: Compass,
+      color: 'text-emerald-400',
+      borderColor: 'group-hover:border-emerald-500/30',
+      glowColor: 'from-emerald-500/10 to-transparent',
+      link: 'http://remolcadores.sytes.net:8000/',
+      isExternal: true,
+      actionText: 'Iniciar Simulador'
+    },
+    {
       title: 'Gemelo Digital (Grafana)',
       subtitle: 'MÉTRICAS EN TIEMPO REAL',
       description: 'Visualización de telemetría CAN-Bus consolidada, históricos de presión/temperatura de cilindros de fuerza y dashboards interactivos optimizados para el monitoreo y auditoría de toda la flota.',
@@ -23,7 +35,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
       actionText: 'Inspeccionar Grafana'
     },
     {
-      title: 'Copiloto de IA (Streamlit)',
+      title: 'Analizador IA (Streamlit)',
       subtitle: 'APRENDIZAJE AUTOMÁTICO',
       description: 'Modelos predictivos de desgaste de camisas, regresiones lineales de lubricante y algoritmos de estimación de Vida Útil Restante (RUL). Detección de fallas térmicas y obstrucción de filtros.',
       icon: Brain,
@@ -33,18 +45,6 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
       link: 'https://datosmotorcat.streamlit.app/',
       isExternal: true,
       actionText: 'Ejecutar Modelos IA'
-    },
-    {
-      title: 'Simulador SmartProp ASD',
-      subtitle: 'CONSOLA DE CONTROL INTERACTIVA',
-      description: 'Interactúa con los mandos de propulsión azimutal J1939, regula la carga del remolcador e inyecta fallas simuladas (como fallas en cilindro #8) para entrenamiento y calibración naval.',
-      icon: Compass,
-      color: 'text-emerald-400',
-      borderColor: 'group-hover:border-emerald-500/30',
-      glowColor: 'from-emerald-500/10 to-transparent',
-      link: '#',
-      isExternal: false,
-      actionText: 'Iniciar Simulador Local'
     }
   ];
 
