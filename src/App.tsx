@@ -47,7 +47,7 @@ export default function App() {
             >
               {/* Product Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/30 border border-cyan-800/30 rounded-sm text-cyan-400 text-xs font-mono font-bold uppercase tracking-[0.15em]">
-                <Cpu className="w-3.5 h-3.5 text-cyan-400 animate-pulse" /> IA Generativa & Predictiva Marítima
+                <Cpu className="w-3.5 h-3.5 text-cyan-400 animate-pulse" /> Simulador & Demostrador Tecnológico
               </div>
 
               {/* H1 Main Title */}
@@ -61,7 +61,7 @@ export default function App() {
 
               {/* Subtitle */}
               <p className="text-slate-350 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
-                Aprovechamos datos en tiempo real y análisis avanzados para determinar el momento óptimo de mantenimiento. Identificamos desviaciones operativas en motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para evitar paradas imprevistas en altamar.
+                Portal de demostración y modelado predictivo para salas de máquinas. Simulamos la telemetría J1939 de motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para analizar anomalías operativas y proyectar fallas de forma proactiva.
               </p>
 
               {/* Actions CTAs */}
@@ -86,7 +86,7 @@ export default function App() {
               {/* Enterprise logos / Trust factors */}
               <div className="pt-6 border-t border-slate-900/60 space-y-2.5">
                 <span className="text-[10px] text-slate-500 font-mono uppercase tracking-widest block font-medium">
-                  SOPORTE Y COMPATIBILIDAD INDUSTRIAL DIRECTA:
+                  MODELADO CONTEXTUAL Y PROTOCOLOS DE PRUEBA:
                 </span>
                 <div className="flex flex-wrap items-center gap-x-6 gap-y-3 font-display text-[15px] font-bold text-slate-400">
                   <span className="hover:text-slate-200 transition-colors">MOTORES DE ALTA VELOCIDAD</span>
@@ -109,8 +109,8 @@ export default function App() {
               <div className="absolute -top-4 -left-4 bg-slate-900 border border-slate-800 p-3 rounded-sm shadow-lg z-20 flex items-center gap-1.5 hidden sm:flex">
                 <ShieldCheck className="w-5 h-5 text-cyan-400" />
                 <div>
-                  <span className="block text-[10px] font-mono text-slate-400 uppercase leading-none">Protección Completa</span>
-                  <span className="block text-[11px] text-white font-bold leading-tight font-display mt-0.5">Certificación Marina IP67</span>
+                  <span className="block text-[10px] font-mono text-slate-400 uppercase leading-none">Entorno de Pruebas</span>
+                  <span className="block text-[11px] text-white font-bold leading-tight font-display mt-0.5">Simulación J1939 ASD</span>
                 </div>
               </div>
 
@@ -182,24 +182,24 @@ export default function App() {
                 ESTUDIO DE FACTIBILIDAD RADAR
               </span>
               <h2 className="font-display text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                Instala un equipo de prueba en tu sala de máquinas hoy mismo.
+                Prueba el portal de simulación interactivo.
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Evaluamos gratis los planos de tu planta impulsora y la viabilidad física de conexión para darte un informe de retorno de inversión garantizado en el buque seleccionado.
+                Evaluamos conceptualmente los diagramas de flujo de datos y la viabilidad técnica para la creación del modelo digital de tu planta impulsora.
               </p>
 
               <div className="space-y-3.5 text-xs text-slate-300 font-mono">
                 <div className="flex gap-2 items-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                  <span>Cero costo de desinstalación o penalidades</span>
+                  <span>Entorno digital interactivo y libre de riesgos operacionales</span>
                 </div>
                 <div className="flex gap-2 items-center text-slate-300">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                  <span>Compatibilidad garantizada con motores diésel marinos de media y alta velocidad</span>
+                  <span>Modelado conceptual compatible con protocolos industriales marinos</span>
                 </div>
                 <div className="flex gap-2 items-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                  <span>Soporte de campo en puertos principales de Sudamérica</span>
+                  <span>Pruebas de factibilidad técnica y simulación de fallas en vivo</span>
                 </div>
               </div>
             </div>

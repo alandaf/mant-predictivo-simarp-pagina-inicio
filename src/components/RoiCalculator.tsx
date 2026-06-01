@@ -209,7 +209,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
 
           <div className="pt-6 border-t border-slate-900/60 mt-6 space-y-4">
             <div className="p-3.5 bg-cyan-950/20 rounded-sm border border-cyan-900/30 text-xs text-slate-350 leading-normal font-sans">
-              🛡️ <strong>Garantía Simarp:</strong> Integramos el hardware sin soldaduras, empalmes o modificación alguna de la garantía original del fabricante del motor.
+              🛡️ <strong>Integración de Datos No Intrusiva:</strong> El modelado predictivo de pruebas emula lecturas pasivas del bus CAN, garantizando cero interferencias con la electrónica y la garantía original de los equipos.
             </div>
             
             <button

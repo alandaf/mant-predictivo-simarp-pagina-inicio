@@ -114,8 +114,8 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
               Ingeniería Informática aplicada al rigor del mar.
             </h2>
 
-            <p className="text-slate-350 text-sm leading-relaxed">
-              Más de 10 años integrando soluciones en la marina mercante. Entendemos cómo vibra un barco, cómo trabaja el personal a bordo, y hablamos el lenguaje de la sala de máquinas.
+            <p className="text-slate-355 text-sm leading-relaxed">
+              Desarrollamos soluciones enfocadas en modelar la física de la sala de máquinas. Analizamos las vibraciones, presiones y flujos térmicos para simular condiciones operativas reales y entrenar modelos de IA.
             </p>
 
             {/* Bullets cred details */}
@@ -131,8 +131,8 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
               <div className="flex gap-2.5 items-start font-sans">
                 <Cpu className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-100">Hardware Grado Militar</p>
-                  <p className="text-slate-400">Cajas de adquisición de acero inoxidable marino, antivibración y resistentes a condensación salina.</p>
+                  <p className="font-bold text-slate-100">Modelado de Adquisición Edge</p>
+                  <p className="text-slate-400">Emulamos la adquisición de datos J1939 del bus CAN bajo condiciones extremas y de fatiga del motor.</p>
                 </div>
               </div>
             </div>
@@ -140,35 +140,29 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
 
           {/* Testimonial / Credibility Stat Block (Col 5) */}
           <div className="lg:col-span-5 bg-slate-950/70 p-6 rounded-sm border border-slate-850 flex flex-col justify-between h-full space-y-6">
-            <blockquote className="space-y-4">
-              <span className="text-[36px] font-serif text-slate-600 block leading-none">“</span>
-              <p className="text-xs text-slate-300 italic leading-relaxed font-sans -mt-4">
-                "Haber implementado el nodo Simarp en nuestros cargueros nos evitó una varada crítica de un motor principal en el Pacífico medio. El panel nos marcaba temperaturas aceptables, pero el algoritmo predijo la anomalía térmica del inyector con 4 días de anticipación. Volvimos a puerto seguros."
+            <div className="space-y-4">
+              <span className="text-[10px] font-mono uppercase text-cyan-400 font-bold tracking-widest bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+                Caso de Estudio Simulado
+              </span>
+              <p className="text-xs text-slate-300 leading-relaxed font-sans mt-2">
+                En nuestro entorno de simulación, recreamos una anomalía térmica de inyector en el cilindro #8. Mientras el panel tradicional marca parámetros estables, el algoritmo predictivo detecta la anomalía de flujo y caída de RUL con 4 días de anticipación antes de la detención crítica del motor.
               </p>
-              <footer className="pt-2">
-                <cite className="block text-xs font-bold text-slate-200 not-italic">
-                  Ing. Mario Contreras G.
-                </cite>
-                <span className="text-[11px] text-slate-500 font-mono block">
-                  Superintendente de Flota, Naviera del Pacífico SL.
-                </span>
-              </footer>
-            </blockquote>
+            </div>
 
             <div className="pt-4 border-t border-slate-900 flex justify-between items-center text-center">
               <div>
-                <span className="block text-2xl font-mono font-extrabold text-white">10+</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Años de Integración</span>
+                <span className="block text-2xl font-mono font-extrabold text-white">92.5%</span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Precisión Modelo</span>
               </div>
               <div className="border-r border-slate-900 h-8" />
               <div>
-                <span className="block text-2xl font-mono font-extrabold text-cyan-400">92%</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Precisión Alertas</span>
+                <span className="block text-2xl font-mono font-extrabold text-cyan-400">J1939</span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Estándar Emulación</span>
               </div>
               <div className="border-r border-slate-900 h-8" />
               <div>
-                <span className="block text-2xl font-mono font-extrabold text-white">24/7</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Soporte Satelital</span>
+                <span className="block text-2xl font-mono font-extrabold text-white">100%</span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Datos Locales</span>
               </div>
             </div>
           </div>
