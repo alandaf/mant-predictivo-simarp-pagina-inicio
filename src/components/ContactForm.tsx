@@ -121,7 +121,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. Ing. Carlos Mendoza"
                 value={formData.nombre}
                 onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
               />
             </div>
 
@@ -134,7 +134,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. Superintendente de Flota / Jefe de Máquinas"
                 value={formData.cargo}
                 onChange={(e) => setFormData({ ...formData, cargo: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
               />
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. c.mendoza@navierasur.cl"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
               />
             </div>
 
@@ -165,7 +165,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. Naviera del Sur S.A."
                 value={formData.compania}
                 onChange={(e) => setFormData({ ...formData, compania: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
               />
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
               <select
                 value={formData.flotaSize}
                 onChange={(e) => setFormData({ ...formData, flotaSize: parseInt(e.target.value) })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
               >
                 <option value="1">1 Buque</option>
                 <option value="3">2 a 5 Buques</option>
@@ -195,7 +195,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
               <select
                 value={formData.motorBrand}
                 onChange={(e) => setFormData({ ...formData, motorBrand: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
               >
                 <option value="Diésel 4 Tiempos (Alta Velocidad)">Diésel 4 Tiempos (Alta Velocidad)</option>
                 <option value="Diésel 4 Tiempos (Media Velocidad)">Diésel 4 Tiempos (Media Velocidad)</option>
@@ -216,7 +216,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
               placeholder="Ej. Motores principales de 4 tiempos y auxiliares de alta velocidad. Interesados en monitoreo de vibración y temperaturas de escape."
               value={formData.mensaje}
               onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
-              className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-650 transition-colors duration-150"
+              className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-650 transition-colors duration-150"
             />
           </div>
 

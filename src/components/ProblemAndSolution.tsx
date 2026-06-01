@@ -1,86 +1,99 @@
 import React from 'react';
 import { 
-  XOctagon, Clock, ShieldX, HardDrive, Cpu, Radio, Network, HelpCircle, ArrowRight, ShieldCheck, Zap
+  XOctagon, Clock, ShieldX, HardDrive, Cpu, Radio, HelpCircle, ArrowRight, ShieldCheck, Zap, Layers, Network
 } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function ProblemAndSolution() {
   return (
-    <div className="space-y-24">
+    <div className="space-y-28">
       
       {/* 1. SECCIÓN DEL PROBLEMA */}
       <section id="problema" className="relative">
         {/* Background ambient highlights */}
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-red-950/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-cyan-950/15 rounded-full blur-3xl pointer-events-none z-0" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-rose-950/10 rounded-full blur-3xl pointer-events-none z-0" />
 
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content (Col 5) */}
-            <div className="lg:col-span-5 space-y-4 lg:space-y-6">
-              <span className="text-red-400 font-mono text-xs uppercase tracking-widest font-bold flex items-center gap-1.5">
-                <XOctagon className="w-4 h-4" /> El Desafío de Altamar
+            <div className="lg:col-span-5 space-y-5 lg:space-y-7">
+              <span className="text-rose-400 font-mono text-xs uppercase tracking-[0.15em] font-bold flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                <XOctagon className="w-4 h-4 text-rose-400" /> El Desafío del Mantenimiento Naval
               </span>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+              <h2 className="font-display text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 El mantenimiento preventivo ya no es suficiente.
               </h2>
-              <p className="text-slate-350 text-base leading-relaxed">
-                Cambiar piezas solo por horas de uso es costoso. Esperar a que una alarma suene en el panel significa que la falla ya ocurrió.
+              <p className="text-slate-350 text-sm sm:text-base leading-relaxed">
+                Cambiar piezas mecánicas basándose únicamente en horas de uso acumuladas es ineficiente y costoso. Por otro lado, esperar a que suene una alarma en la cabina significa que la falla catastrófica ya ocurrió.
               </p>
-              <div className="p-4 bg-slate-900/60 rounded-xl border-l-4 border-red-500/80 text-sm text-slate-300 leading-relaxed font-sans">
-                "En la marina mercante, un motor inoperativo no es solo pérdida económica catastrófica de miles de dólares por día, es un grave riesgo de seguridad para el buque y su tripulación en condiciones de tormenta."
+              <div className="p-4 bg-slate-900/40 rounded-lg border border-slate-800 border-l-4 border-l-rose-500/80 text-xs text-slate-300 leading-relaxed font-mono">
+                "En remolcadores ASD y buques mercantes, un motor detenido en maniobra portuaria crítica no solo cuesta miles de dólares en multas por minuto: pone en riesgo la seguridad de la tripulación."
               </div>
             </div>
 
             {/* Right Contrast Area (Col 7) */}
-            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5">
+              
               {/* Problem Card 1 */}
-              <div className="bg-slate-900/40 p-5 rounded-2xl border border-slate-850 space-y-3">
-                <div className="bg-red-500/10 p-2 rounded-lg text-red-400 w-fit">
+              <motion.div 
+                whileHover={{ y: -4 }}
+                className="bg-slate-900/35 p-6 rounded-lg border border-slate-850 space-y-4 backdrop-blur-sm"
+              >
+                <div className="bg-rose-500/10 p-2.5 rounded-sm text-rose-400 w-fit border border-rose-500/20">
                   <Clock className="w-5 h-5" />
                 </div>
                 <h4 className="font-display font-bold text-slate-100 text-base">
                   Reemplazos Prematuros
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Tirar repuestos caros basándose estrictamente en "horas de manual". Se desecha hasta un 35% de vida útil real debido a pautas ultra-conservadoras del fabricante.
+                  Desechar componentes marinos caros siguiendo rígidamente pautas fijas. Estudios demuestran que se desperdicia hasta un 35% de la vida útil real de cojinetes y camisas debido a sobre-mantenimiento.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Problem Card 2 */}
-              <div className="bg-slate-900/40 p-5 rounded-2xl border border-slate-850 space-y-3">
-                <div className="bg-red-500/10 p-2 rounded-lg text-red-400 w-fit">
-                  <ShieldX className="w-5 h-5 animate-pulse" />
+              <motion.div 
+                whileHover={{ y: -4 }}
+                className="bg-slate-900/35 p-6 rounded-lg border border-slate-850 space-y-4 backdrop-blur-sm"
+              >
+                <div className="bg-rose-500/10 p-2.5 rounded-sm text-rose-400 w-fit border border-rose-500/20">
+                  <ShieldX className="w-5 h-5" />
                 </div>
                 <h4 className="font-display font-bold text-slate-100 text-base">
-                  Alarmas "Post Mortem"
+                  Alarmas Tardías (Post Mortem)
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Los sensores tradicionales de cabina están programados con umbrales máximos toscos. Alertan solo cuando la temperatura o vibración es crítica, indicando una falla inminente o rotura física.
+                  Los sensores J1939 de cabina alertan cuando los valores sobrepasan umbrales críticos de seguridad. Para entonces, el desgaste térmico o la pérdida de caudal de aceite ya causaron daño interno.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Problem Card 3 */}
-              <div className="bg-slate-900/40 p-5 rounded-2xl border border-slate-850 space-y-3">
-                <div className="bg-red-500/10 p-2 rounded-lg text-red-400 w-fit">
+              <motion.div 
+                whileHover={{ y: -4 }}
+                className="bg-slate-900/35 p-6 rounded-lg border border-slate-850 space-y-4 backdrop-blur-sm"
+              >
+                <div className="bg-rose-500/10 p-2.5 rounded-sm text-rose-400 w-fit border border-rose-500/20">
                   <HelpCircle className="w-5 h-5" />
                 </div>
                 <h4 className="font-display font-bold text-slate-100 text-base">
-                  La Caja Negra del Viaje
+                  Pérdida de Historial en Viaje
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Sin registros históricos en alta mar. Los inspectores y superintendentes en tierra solo ven el estado del motor cuando el buque llega a puerto, sin saber cómo se comportó en cruces críticos.
+                  Operación a ciegas fuera de cobertura. Sin bitácoras digitales continuas de presión, vibración y NOx, los ingenieros navales en tierra solo detectan fallas acumuladas al atracar en puerto.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Contrast Quote banner */}
-              <div className="bg-gradient-to-br from-indigo-950/20 to-slate-950 p-5 rounded-2xl border border-slate-850 flex flex-col justify-between">
-                <span className="text-[10px] text-slate-500 font-mono tracking-widest uppercase block">Transición Clave</span>
-                <p className="text-sm text-indigo-300 font-semibold italic mt-2 leading-relaxed">
-                  "Necesitamos visibilidad sub-umbral en tiempo real."
+              <div className="bg-gradient-to-br from-cyan-950/20 to-slate-950 p-6 rounded-lg border border-cyan-500/10 flex flex-col justify-between">
+                <span className="text-[10px] text-cyan-400 font-mono tracking-widest uppercase block font-semibold">Nuestra Filosofía</span>
+                <p className="text-xs text-slate-300 font-semibold italic mt-3 leading-relaxed">
+                  "El objetivo no es alarmar cuando el motor se detiene, sino modelar la degradación para programar la reparación en puerto seguro."
                 </p>
-                <div className="flex items-center gap-1 text-xs text-slate-400 font-medium mt-4">
-                  <span>Ver la solución Simarp</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="flex items-center gap-1 text-[11px] text-cyan-400 font-mono font-bold mt-5">
+                  <span>Conoce el Ecosistema Simarp</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
                 </div>
               </div>
 
@@ -92,106 +105,128 @@ export default function ProblemAndSolution() {
 
       {/* 2. SECCIÓN DE LA SOLUCIÓN */}
       <section id="solucion" className="relative pt-6">
-        {/* Subtle geometric grid background accent */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-600/5 rounded-full blur-3xl pointer-events-none" />
+        {/* Subtle geometric background accent */}
+        <div className="absolute top-0 right-10 w-96 h-96 bg-cyan-600/5 rounded-full blur-3xl pointer-events-none z-0" />
+        <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-indigo-950/10 rounded-full blur-3xl pointer-events-none z-0" />
 
-        <div className="max-w-7xl mx-auto space-y-12">
+        <div className="max-w-7xl mx-auto space-y-16 relative z-10">
           
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="text-cyan-400 font-mono text-xs uppercase tracking-[0.2em] font-bold px-3 py-1 bg-cyan-500/10 border border-cyan-500/25 rounded-sm">
-              SISTEMA INTEGRAL DE MONITOREO
+            <span className="text-cyan-400 font-mono text-[11px] uppercase tracking-[0.2em] font-bold px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-sm">
+              ARQUITECTURA INTEGRAL DE DIAGNÓSTICO
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl font-bold text-white tracking-tight">
-              Inteligencia IA Conectada a tu Sala de Máquinas
+            <h2 className="font-display text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
+              Flujo de Datos: Del CAN-Bus a tu Pantalla
             </h2>
-            <p className="text-slate-450 text-sm leading-relaxed max-w-2xl mx-auto">
-              Simarp fusiona hardware de grado marino con modelos predictivos avanzados para digitalizar y proteger la planta de fuerza de tu buque.
+            <p className="text-slate-400 text-sm leading-relaxed max-w-2xl mx-auto">
+              Simarp conecta e integra en tiempo real la telemetría del remolcador, el análisis de fatiga por Inteligencia Artificial y la consolidación de dashboards en la nube.
             </p>
           </div>
 
-          {/* Solution Grid (3 columns) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {/* Pipeline Visual Flow (3 columns with directional indicators) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
             
-            {/* Card 1: Extracción Edge */}
-            <div className="bg-slate-900 border border-slate-800 p-6 lg:p-8 rounded-sm relative group hover:border-cyan-500/30 transition-colors duration-200">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl" />
-              <div className="bg-gradient-to-br from-cyan-950/40 to-slate-950 p-3.5 rounded-sm text-cyan-400 border border-slate-800 w-fit mb-6">
-                <HardDrive className="w-6 h-6 text-cyan-400" />
+            {/* Step 1: Telemetría Edge / Simulador J1939 */}
+            <motion.div 
+              whileHover={{ y: -6 }}
+              className="bg-slate-900/40 border border-slate-800 p-6 lg:p-8 rounded-lg relative backdrop-blur-md flex flex-col justify-between h-full group hover:border-cyan-500/30 transition-all duration-300"
+            >
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="bg-gradient-to-br from-cyan-950 to-slate-950 p-3 rounded-sm text-cyan-400 border border-cyan-500/15">
+                    <HardDrive className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-mono bg-cyan-950/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-900/30">PASO 01 - EDGE</span>
+                </div>
+                
+                <h3 className="font-display text-lg font-bold text-white">
+                  Captura de Datos J1939 (ASD)
+                </h3>
+                
+                <p className="text-slate-400 text-xs mt-3 leading-relaxed font-sans">
+                  Extracción continua a través del bus CAN del buque. Monitoreamos en tiempo real las variables físicas fundamentales simuladas: RPM de la hélice, el ángulo del propulsor azimutal ASD, temperaturas de escape, presiones y los gradientes térmicos en las camisas de cilindros de fuerza.
+                </p>
               </div>
-              
-              <h3 className="font-display text-xl font-bold text-slate-100 flex items-center gap-2">
-                Extracción Edge
-              </h3>
-              
-              <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-                Nos conectamos al puerto <strong className="text-slate-200">CAN Bus / J1939</strong> mediante hardware industrial sellado IP67, leyendo frecuencia de inyección, presiones y acelerometría sin alterar la electrónica ni la garantía del buque.
-              </p>
 
-              <div className="mt-6 pt-4 border-t border-slate-950 text-[11px] font-mono text-slate-500 flex items-center justify-between">
-                <span>Protocolo: J1939 & Modbus</span>
-                <span className="text-cyan-400 font-bold uppercase tracking-wider">Plug & Play</span>
+              <div className="mt-8 pt-4 border-t border-slate-950 text-[10.5px] font-mono text-slate-500 flex items-center justify-between">
+                <span>Protocolo: CAN-Bus J1939</span>
+                <span className="text-cyan-400 font-bold uppercase tracking-wide">Física del Motor</span>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Card 2: Transmisión Segura */}
-            <div className="bg-slate-900 border border-slate-800 p-6 lg:p-8 rounded-sm relative group hover:border-cyan-500/30 transition-colors duration-200">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl" />
-              <div className="bg-gradient-to-br from-cyan-950/40 to-slate-950 p-3.5 rounded-sm text-cyan-400 border border-slate-800 w-fit mb-6">
-                <Radio className="w-6 h-6 text-cyan-400" />
+            {/* Step 2: Algoritmos de IA Predictiva (Streamlit) */}
+            <motion.div 
+              whileHover={{ y: -6 }}
+              className="bg-slate-900/40 border border-slate-800 p-6 lg:p-8 rounded-lg relative backdrop-blur-md flex flex-col justify-between h-full group hover:border-orange-500/30 transition-all duration-300"
+            >
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="bg-gradient-to-br from-orange-950/40 to-slate-950 p-3 rounded-sm text-orange-400 border border-orange-500/15">
+                    <Cpu className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-mono bg-orange-950/40 text-orange-400 px-2 py-0.5 rounded border border-orange-900/30">PASO 02 - IA CORE</span>
+                </div>
+                
+                <h3 className="font-display text-lg font-bold text-white">
+                  Modelado Neuronal & RUL
+                </h3>
+                
+                <p className="text-slate-400 text-xs mt-3 leading-relaxed font-sans">
+                  Los datos se procesan mediante modelos predictivos en Streamlit. Evaluamos la Vida Útil Restante (RUL), las anomalías en inyectores (como la pérdida de compresión en el cilindro #8) y regresiones lineales de degradación del lubricante para anticipar saturaciones de filtros.
+                </p>
               </div>
-              
-              <h3 className="font-display text-xl font-bold text-slate-100 flex items-center gap-2">
-                Transmisión Segura
-              </h3>
-              
-              <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-                Sistema <strong className="text-slate-200">Store-and-Forward</strong> local de ultra-tolerancia. Si el buque pierde conexión satelital (FBB/VSAT) durante semanas, los datos se almacenan de forma local encriptada y se sincronizan al recuperar señal.
-              </p>
 
-              <div className="mt-6 pt-4 border-t border-slate-950 text-[11px] font-mono text-slate-500 flex items-center justify-between">
-                <span>Respaldo: Storage Encriptado</span>
-                <span className="text-cyan-400 font-bold uppercase tracking-wider">Cero Pérdida</span>
+              <div className="mt-8 pt-4 border-t border-slate-950 text-[10.5px] font-mono text-slate-500 flex items-center justify-between">
+                <span>Modelos: Regresión & RUL</span>
+                <span className="text-orange-400 font-bold uppercase tracking-wide">Streamlit AI</span>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Card 3: Análisis Predictivo */}
-            <div className="bg-slate-900 border border-slate-800 p-6 lg:p-8 rounded-sm relative group hover:border-cyan-500/30 transition-colors duration-200">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl" />
-              <div className="bg-gradient-to-br from-cyan-950/40 to-slate-950 p-3.5 rounded-sm text-cyan-400 border border-slate-800 w-fit mb-6">
-                <Cpu className="w-6 h-6 text-cyan-400" />
+            {/* Step 3: Gemelo Digital y Reportes (Grafana) */}
+            <motion.div 
+              whileHover={{ y: -6 }}
+              className="bg-slate-900/40 border border-slate-800 p-6 lg:p-8 rounded-lg relative backdrop-blur-md flex flex-col justify-between h-full group hover:border-emerald-500/30 transition-all duration-300"
+            >
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="bg-gradient-to-br from-emerald-950/40 to-slate-950 p-3 rounded-sm text-emerald-400 border border-emerald-500/15">
+                    <Layers className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-mono bg-emerald-950/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-900/30">PASO 03 - CLOUD</span>
+                </div>
+                
+                <h3 className="font-display text-lg font-bold text-white">
+                  Gemelo Digital en Grafana
+                </h3>
+                
+                <p className="text-slate-400 text-xs mt-3 leading-relaxed font-sans">
+                  Consolidación de métricas de flota en dashboards dinámicos. Visualización 3D del estado operativo del remolcador, reportes de eficiencia térmica e históricos de telemetría disponibles en la nube para auditores, armadores y superintendentes en tierra.
+                </p>
               </div>
-              
-              <h3 className="font-display text-xl font-bold text-slate-100 flex items-center gap-2">
-                Análisis Predictivo
-              </h3>
-              
-              <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-                Nuestros algoritmos analizan millones de datos correlacionados (presión, aceleraciones y calor de escape) para rastrear <strong className="text-slate-200">tendencias de degradación sub-umbral</strong>, proyectando fallas semanas antes de que ocurran.
-              </p>
 
-              <div className="mt-6 pt-4 border-t border-slate-950 text-[11px] font-mono text-slate-500 flex items-center justify-between">
-                <span>Core: Modelado Multivariable</span>
-                <span className="text-cyan-400 font-bold uppercase tracking-wider">92.5% Certeza</span>
+              <div className="mt-8 pt-4 border-t border-slate-950 text-[10.5px] font-mono text-slate-500 flex items-center justify-between">
+                <span>Visualización: Grafana Cloud</span>
+                <span className="text-emerald-400 font-bold uppercase tracking-wide">Monitoreo 3D</span>
               </div>
-            </div>
+            </motion.div>
 
           </div>
 
           {/* Lower trust anchor banner */}
-          <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-5 rounded-sm border border-slate-850 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="bg-gradient-to-r from-slate-950 via-slate-905 via-slate-900 to-slate-950 p-5 rounded-lg border border-slate-850 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <div className="flex gap-3 items-center text-left">
-              <div className="bg-cyan-500/10 p-2 rounded-sm text-cyan-450 hidden sm:block">
-                <Zap className="w-5 h-5 text-cyan-400" />
+              <div className="bg-cyan-500/15 p-2 rounded-sm text-cyan-400 hidden sm:block border border-cyan-500/20">
+                <Network className="w-5 h-5 text-cyan-400" />
               </div>
               <div>
-                <p className="text-white text-sm font-semibold">Gemelo Digital en Tiempo Real</p>
-                <p className="text-slate-400 text-xs font-sans">Monitoreamos el desgaste de cilindros, turbocompresores y cojinetes sin detener las máquinas.</p>
+                <p className="text-white text-sm font-semibold">Integración de Extremo a Extremo</p>
+                <p className="text-slate-400 text-xs font-sans">Desde el sensor físico CAN-Bus a bordo hasta los informes predictivos del comportamiento térmico.</p>
               </div>
             </div>
             <div className="flex gap-2 items-center text-xs text-slate-200 font-mono bg-slate-950 px-4 py-2 rounded-sm border border-slate-800">
-              <ShieldCheck className="w-4 h-4 text-cyan-400" />
-              <span className="uppercase tracking-widest font-bold text-[10px]">RECOMENDADO POR MARINA MERCANTE</span>
+              <ShieldCheck className="w-4 h-4 text-cyan-450 animate-pulse" />
+              <span className="uppercase tracking-widest font-bold text-[10px] text-cyan-400">TELEMETRÍA 100% AUDITABLE</span>
             </div>
           </div>
 

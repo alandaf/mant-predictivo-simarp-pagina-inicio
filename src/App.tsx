@@ -20,8 +20,15 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden relative">
+      {/* Technical Grid Overlay */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.25] pointer-events-none z-0" />
+      
+      {/* Ambient Glowing Orbs */}
+      <div className="absolute top-0 right-10 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-[400px] left-10 w-[600px] h-[600px] bg-indigo-900/5 rounded-full blur-[140px] pointer-events-none z-0" />
+
       {/* Wave decor backgrounds */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-gradient-to-b from-cyan-950/10 via-slate-950/5 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-gradient-to-b from-cyan-950/20 via-slate-950/5 to-transparent blur-3xl pointer-events-none" />
 
       {/* Navigation */}
       <Navbar onContactClick={openDemoModal} />
@@ -107,24 +114,29 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Graphic illustration representative of cargo ship and data node */}
-              <div className="relative rounded-sm overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/40 p-4">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-slate-950/20" />
+              {/* Graphic illustration representative of tugboat and telemetry node */}
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="relative rounded-lg overflow-hidden border border-cyan-500/15 shadow-2xl shadow-cyan-950/30 bg-slate-900/40 backdrop-blur-md p-4 group"
+              >
+                <div className="absolute -inset-px bg-gradient-to-tr from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-px bg-gradient-to-br from-cyan-950/10 via-transparent to-slate-950/25 pointer-events-none" />
                 <img 
                   src="/harbor_tugboat.png" 
                   alt="Remolcador de puerto operando" 
-                  className="w-full h-64 object-cover rounded-sm grayscale brightness-90 relative z-10"
+                  className="w-full h-64 object-cover rounded-sm grayscale brightness-90 relative z-10 border border-slate-800"
                 />
                 
                 <div className="pt-4 relative z-10">
                   <p className="font-mono text-[10px] text-cyan-400 uppercase tracking-[0.12em] font-bold flex items-center gap-1">
-                    <Waves className="w-3.5 h-3.5 text-cyan-450 animate-pulse" /> Telemarina Activa en Altamar
+                    <Waves className="w-3.5 h-3.5 text-cyan-400 animate-pulse" /> Telemetría Activa en Remolcador
                   </p>
                   <p className="text-white font-display text-sm font-semibold mt-1">
-                    Nodo Simarp-Edge sincronizando diagnóstico vía Satélite.
+                    Nodo Simarp-Edge transmitiendo datos J1939 en tiempo real.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
           </div>

@@ -134,23 +134,23 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
         </div>
 
         {/* Results Graph/Card Area */}
-        <div className="lg:col-span-6 bg-slate-950 rounded-sm p-6 lg:p-8 border border-slate-800/80 flex flex-col justify-between">
+        <div className="lg:col-span-6 bg-slate-900/60 backdrop-blur-md rounded-sm p-6 lg:p-8 border border-cyan-500/10 shadow-xl shadow-cyan-950/20 flex flex-col justify-between">
           <div>
-            <span className="text-xs text-slate-500 font-mono uppercase tracking-[0.1em] block mb-1">
+            <span className="text-xs text-cyan-400 font-mono uppercase tracking-[0.1em] block mb-1">
               Ahorros Anuales Totales Proyectados
             </span>
             <div className="text-3xl lg:text-5xl font-display font-extrabold text-white leading-none tracking-tight">
               {formatUSD(totalAnnualSavings)}{' '}
-              <span className="text-lg text-cyan-400 font-sans font-semibold block sm:inline mt-1 sm:mt-0">
+              <span className="text-lg text-cyan-405 font-sans font-semibold block sm:inline mt-1 sm:mt-0 text-cyan-400">
                 USD / Año
               </span>
             </div>
             
-            <div className="mt-6 pt-6 border-t border-slate-900 space-y-4">
+            <div className="mt-6 pt-6 border-t border-slate-900/60 space-y-4">
               {/* Savings Breakdowns */}
               <div className="flex justify-between items-start">
                 <div className="flex gap-2 items-start">
-                  <div className="bg-cyan-500/10 p-1.5 rounded-sm text-cyan-400 mt-0.5">
+                  <div className="bg-cyan-500/10 p-1.5 rounded-sm text-cyan-400 mt-0.5 border border-cyan-500/15">
                     <TrendingUp className="w-4 h-4 text-cyan-400" />
                   </div>
                   <div>
@@ -169,7 +169,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
 
               <div className="flex justify-between items-start">
                 <div className="flex gap-2 items-start">
-                  <div className="bg-cyan-500/10 p-1.5 rounded-sm text-cyan-400 mt-0.5">
+                  <div className="bg-cyan-500/10 p-1.5 rounded-sm text-cyan-400 mt-0.5 border border-cyan-500/15">
                     <Coins className="w-4 h-4 text-cyan-400" />
                   </div>
                   <div>
@@ -188,7 +188,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
 
               <div className="flex justify-between items-start">
                 <div className="flex gap-2 items-start">
-                  <div className="bg-cyan-500/10 p-1.5 rounded-sm text-cyan-400 mt-0.5">
+                  <div className="bg-cyan-500/10 p-1.5 rounded-sm text-cyan-400 mt-0.5 border border-cyan-500/15">
                     <Ship className="w-4 h-4 text-cyan-400" />
                   </div>
                   <div>
@@ -207,14 +207,14 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
             </div>
           </div>
 
-          <div className="pt-6 border-t border-slate-900 mt-6 space-y-4">
-            <div className="p-3.5 bg-cyan-950/15 rounded-sm border border-cyan-900/35 text-xs text-slate-300 leading-normal">
+          <div className="pt-6 border-t border-slate-900/60 mt-6 space-y-4">
+            <div className="p-3.5 bg-cyan-950/20 rounded-sm border border-cyan-900/30 text-xs text-slate-350 leading-normal font-sans">
               🛡️ <strong>Garantía Simarp:</strong> Integramos el hardware sin soldaduras, empalmes o modificación alguna de la garantía original del fabricante del motor.
             </div>
             
             <button
               onClick={onContactClick}
-              className="w-full bg-cyan-600 hover:bg-cyan-500 text-slate-950 py-3.5 rounded-sm font-bold text-xs tracking-widest cursor-pointer transform transition-all duration-150 shadow-md shadow-cyan-950/25 flex items-center justify-center gap-2 uppercase"
+              className="w-full bg-cyan-600 hover:bg-cyan-500 text-slate-950 py-3.5 rounded-sm font-bold text-xs tracking-widest cursor-pointer transform hover:-translate-y-0.5 transition-all duration-150 shadow-md shadow-cyan-950/25 flex items-center justify-center gap-2 uppercase"
             >
               Cotizar Integración para {fleetSize} Buques
             </button>

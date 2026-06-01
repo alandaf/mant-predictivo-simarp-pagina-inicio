@@ -13,7 +13,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
     {
       title: 'Gemelo Digital (Grafana)',
       subtitle: 'MÉTRICAS EN TIEMPO REAL',
-      description: 'Visualización de telemetría consolidada, tendencias históricas y dashboards tridimensionales optimizados para el monitoreo de toda la flota.',
+      description: 'Visualización de telemetría CAN-Bus consolidada, históricos de presión/temperatura de cilindros de fuerza y dashboards interactivos optimizados para el monitoreo y auditoría de toda la flota.',
       icon: Layers,
       color: 'text-cyan-400',
       borderColor: 'group-hover:border-cyan-500/30',
@@ -25,7 +25,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
     {
       title: 'Copiloto de IA (Streamlit)',
       subtitle: 'APRENDIZAJE AUTOMÁTICO',
-      description: 'Modelos predictivos de desgaste de camisas de fuerza, regresión lineal de lubricación y estimación de Vida Útil Restante (RUL) de motores marinos de gran cilindrada.',
+      description: 'Modelos predictivos de desgaste de camisas, regresiones lineales de lubricante y algoritmos de estimación de Vida Útil Restante (RUL). Detección de fallas térmicas y obstrucción de filtros.',
       icon: Brain,
       color: 'text-orange-400',
       borderColor: 'group-hover:border-orange-500/30',
@@ -37,7 +37,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
     {
       title: 'Simulador SmartProp ASD',
       subtitle: 'CONSOLA DE CONTROL INTERACTIVA',
-      description: 'Interactúa con los mandos de propulsión azimutal J1939, regula la carga del remolcador e inyecta fallas simuladas para entrenamiento y capacitación naval.',
+      description: 'Interactúa con los mandos de propulsión azimutal J1939, regula la carga del remolcador e inyecta fallas simuladas (como fallas en cilindro #8) para entrenamiento y calibración naval.',
       icon: Compass,
       color: 'text-emerald-400',
       borderColor: 'group-hover:border-emerald-500/30',
