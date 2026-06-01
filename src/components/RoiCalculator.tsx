@@ -126,9 +126,18 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
                 onChange={(e) => setUnplannedFailureCost(parseInt(e.target.value))}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
               />
-              <p className="text-[11px] text-slate-500 leading-normal">
-                *Incluye días de inactividad comercial, fletes retrasados, repuestos de emergencia vía helicóptero/lancha y remolcadores.
+              <p className="text-[10px] text-slate-500 leading-relaxed font-mono">
+                *Incluye días de inactividad comercial, fletes retrasados, repuestos de emergencia y remolcadores.
               </p>
+              <div className="text-[9.5px] text-slate-550 border-t border-slate-850 pt-3 mt-3 text-slate-500 space-y-1 font-sans">
+                <span className="font-semibold text-slate-450 block uppercase tracking-wider text-[10px] mb-1">Metodología y Fuentes del Modelo de Retorno:</span>
+                <p>
+                  • <strong>Prevención de Averías:</strong> Frecuencia promedio de 0.4 fallas de maquinaria al año por buque. Costo unitario conservador de USD 250,000 en base al <em>Machinery Damage Report</em> de <strong>The Swedish Club</strong> (donde los siniestros promedio en motores principales superan los USD 650,000).
+                </p>
+                <p>
+                  • <strong>Ahorro de Combustible:</strong> Coeficiente del 1.8% sustentado en reportes de eficiencia de <strong>Wärtsilä FOS (Fleet Optimisation Solutions)</strong> y guías de optimización de combustión de <strong>DNV</strong> (que proyectan un rango de 1.5% a 5% de ahorro mediante monitoreo térmico continuo).
+                </p>
+              </div>
             </div>
           </div>
         </div>
