@@ -21,7 +21,7 @@ export default function ProblemAndSolution() {
             <div className="lg:col-span-5 space-y-5 lg:space-y-7">
               <span className="text-rose-400 font-mono text-xs uppercase tracking-[0.15em] font-bold flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
-                <XOctagon className="w-4 h-4 text-rose-400" /> El Desafío del Mantenimiento Naval
+                <XOctagon className="w-4 h-4 text-rose-400" /> El Desafío del Mantenimiento Marítimo
               </span>
               <h2 className="font-display text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 El mantenimiento preventivo ya no es suficiente.
@@ -81,7 +81,7 @@ export default function ProblemAndSolution() {
                   Pérdida de Historial en Viaje
                 </h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Operación a ciegas fuera de cobertura. Sin bitácoras digitales continuas de presión, vibración y NOx, los ingenieros navales en tierra solo detectan fallas acumuladas al atracar en puerto.
+                  Operación a ciegas fuera de cobertura. Sin bitácoras digitales continuas de presión, vibración y NOx, los ingenieros marítimos en tierra solo detectan fallas acumuladas al atracar en puerto.
                 </p>
               </motion.div>
 
@@ -183,7 +183,7 @@ export default function ProblemAndSolution() {
               </div>
             </motion.div>
 
-            {/* Step 3: Gemelo Digital y Reportes (Grafana) */}
+            {/* Step 3: Monitores Online y Reportes (Grafana) */}
             <motion.div 
               whileHover={{ y: -6 }}
               className="bg-slate-900/40 border border-slate-800 p-6 lg:p-8 rounded-lg relative backdrop-blur-md flex flex-col justify-between h-full group hover:border-emerald-500/30 transition-all duration-300"
@@ -197,7 +197,7 @@ export default function ProblemAndSolution() {
                 </div>
                 
                 <h3 className="font-display text-lg font-bold text-white">
-                  Gemelo Digital en Grafana
+                  Monitores Online en Grafana
                 </h3>
                 
                 <p className="text-slate-400 text-xs mt-3 leading-relaxed font-sans">

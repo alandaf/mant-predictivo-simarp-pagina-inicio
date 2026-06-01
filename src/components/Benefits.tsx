@@ -18,7 +18,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
       bg: 'bg-cyan-500/15'
     },
     {
-      title: 'Gemelo Digital y Dashboard Web 24/7',
+      title: 'Monitores Online y Dashboard Web 24/7',
       description: 'Acceso total en tiempo real desde cualquier dispositivo de escritorio o móvil a la telemetría de toda tu flota. Sigue las tendencias térmicas de cada cilindro e inspecciona informes históricos generados por IA.',
       accent: 'Vista Global de Flota',
       icon: LayoutGrid,
@@ -106,7 +106,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
                 <Anchor className="w-4 h-4 text-cyan-400" />
               </div>
               <span className="text-cyan-400 font-mono text-xs font-bold uppercase tracking-[0.2em]">
-                Ingeniería Naval de Alta Precisión
+                Ingeniería Marítima de Alta Precisión
               </span>
             </div>
 

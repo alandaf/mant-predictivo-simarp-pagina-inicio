@@ -638,7 +638,7 @@ export default function TelemetrySimulator() {
             ) : (
               <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-slate-950 border border-slate-800 rounded-sm text-slate-400 text-[10px] font-mono font-semibold uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                Gemelo Digital • Simulador Local
+                Monitores Online • Simulador Local
               </span>
             )}
             
@@ -684,7 +684,7 @@ export default function TelemetrySimulator() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-4 py-2.5 font-display text-xs font-bold uppercase tracking-wider border-b-2 border-transparent text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all cursor-pointer"
         >
-          <Layers className="w-4 h-4 text-cyan-400" /> Gemelo Digital Grafana <span className="text-[10px] bg-cyan-950/50 border border-cyan-800/40 text-cyan-400 px-1.5 py-0.5 rounded-sm font-mono font-bold tracking-normal">↗</span>
+          <Layers className="w-4 h-4 text-cyan-400" /> Monitores Online Grafana <span className="text-[10px] bg-cyan-950/50 border border-cyan-800/40 text-cyan-400 px-1.5 py-0.5 rounded-sm font-mono font-bold tracking-normal">↗</span>
         </a>
         <a
           href="https://datosmotorcat.streamlit.app/"

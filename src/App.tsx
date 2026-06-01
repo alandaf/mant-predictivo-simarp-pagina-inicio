@@ -244,7 +244,7 @@ export default function App() {
               <a href="#solucion" className="hover:text-white transition-colors">La Solución</a>
               <a href="#calculadora" className="hover:text-white transition-colors">Calculadora ROI</a>
               <a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a>
-              <a href="#valores" className="hover:text-white transition-colors">Ingeniería Naval</a>
+              <a href="#valores" className="hover:text-white transition-colors">Ingeniería Marítima</a>
             </div>
           </div>
 

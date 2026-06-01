@@ -84,7 +84,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
           </p>
           <div className="bg-slate-900 border border-slate-800 rounded-sm p-4 text-xs text-slate-400 max-w-sm mx-auto space-y-2 text-left">
             <p className="font-semibold text-slate-200">Próximos pasos de Simarp:</p>
-            <p>• <strong>Análisis Técnico:</strong> Un Ingeniero Naval revisará las especificaciones de motores {formData.motorBrand}.</p>
+            <p>• <strong>Análisis Técnico:</strong> Un Ingeniero Marítimo revisará las especificaciones de motores {formData.motorBrand}.</p>
             <p>• <strong>Contacto Directo:</strong> Te enviaremos un email a {formData.email} en menos de 10 horas hábiles para agendar la llamada técnica por Teams o WhatsApp.</p>
           </div>
           <div className="pt-4">
