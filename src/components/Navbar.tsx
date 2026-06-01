@@ -54,9 +54,12 @@ export default function Navbar({ onContactClick }: NavbarProps) {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center space-x-2.5 cursor-pointer group"
           >
-            <div className="bg-cyan-500 h-9 w-9 rounded flex items-center justify-center font-bold text-slate-950 group-hover:scale-105 transition-all duration-200">
-              <Ship className="w-5 h-5 text-slate-950" />
-            </div>
+            <img 
+              src="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" 
+              alt="Simarp Logo" 
+              className="h-9 w-auto rounded-sm group-hover:scale-105 transition-all duration-200 brightness-110"
+              referrerPolicy="no-referrer"
+            />
             <div>
               <span className="font-display text-xl font-bold tracking-tighter text-white group-hover:text-cyan-400 transition-colors duration-200 uppercase italic">
                 SIMARP <span className="text-cyan-500 font-sans not-italic">LIMITADA</span>

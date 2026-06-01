@@ -210,10 +210,13 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-900/70">
             
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="bg-slate-900 border border-slate-800 p-2 rounded-sm text-white">
-                <Ship className="w-5 h-5 text-cyan-400" />
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" 
+                alt="Simarp Logo" 
+                className="h-10 w-auto rounded-sm brightness-110"
+                referrerPolicy="no-referrer"
+              />
               <div>
                 <span className="font-display text-lg font-bold tracking-tight text-white block">
                   SIMARP LIMITADA
