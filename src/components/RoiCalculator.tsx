@@ -225,7 +225,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
               onClick={onContactClick}
               className="w-full bg-cyan-600 hover:bg-cyan-500 text-slate-950 py-3.5 rounded-sm font-bold text-xs tracking-widest cursor-pointer transform hover:-translate-y-0.5 transition-all duration-150 shadow-md shadow-cyan-950/25 flex items-center justify-center gap-2 uppercase"
             >
-              Cotizar Integración para {fleetSize} Buques
+              Solicitar Reunión para {fleetSize} {fleetSize === 1 ? 'Buque' : 'Buques'}
             </button>
           </div>
 
