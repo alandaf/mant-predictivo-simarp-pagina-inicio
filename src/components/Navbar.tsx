@@ -54,12 +54,14 @@ export default function Navbar({ onContactClick }: NavbarProps) {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center space-x-2.5 cursor-pointer group"
           >
-            <img 
-              src="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" 
-              alt="Simarp Logo" 
-              className="h-9 w-auto rounded-sm group-hover:scale-105 transition-all duration-200 brightness-110"
-              referrerPolicy="no-referrer"
-            />
+            <div className="bg-white p-1 rounded-full h-9 w-9 flex items-center justify-center shadow-[0_0_10px_rgba(6,182,212,0.15)] group-hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] group-hover:scale-105 transition-all duration-200">
+              <img 
+                src="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" 
+                alt="Simarp Logo" 
+                className="h-7 w-auto object-contain rounded-full"
+                referrerPolicy="no-referrer"
+              />
+            </div>
             <div>
               <span className="font-display text-xl font-bold tracking-tighter text-white group-hover:text-cyan-400 transition-colors duration-200 uppercase italic">
                 SIMARP <span className="text-cyan-500 font-sans not-italic">LIMITADA</span>

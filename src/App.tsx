@@ -211,12 +211,14 @@ export default function App() {
             
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" 
-                alt="Simarp Logo" 
-                className="h-10 w-auto rounded-sm brightness-110"
-                referrerPolicy="no-referrer"
-              />
+              <div className="bg-white p-1 rounded-full h-10 w-10 flex items-center justify-center shadow-lg">
+                <img 
+                  src="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" 
+                  alt="Simarp Logo" 
+                  className="h-8 w-auto object-contain rounded-full"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               <div>
                 <span className="font-display text-lg font-bold tracking-tight text-white block">
                   SIMARP LIMITADA
