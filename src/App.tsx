@@ -47,16 +47,16 @@ export default function App() {
             >
               {/* Product Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/30 border border-cyan-800/30 rounded-sm text-cyan-400 text-xs font-mono font-bold uppercase tracking-[0.15em]">
-                <Cpu className="w-3.5 h-3.5 text-cyan-400 animate-pulse" /> Simulador & Demostrador Tecnológico
+                <Cpu className="w-3.5 h-3.5 text-cyan-400 animate-pulse" /> Monitoreo Predictivo J1939
               </div>
 
               {/* H1 Main Title */}
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
-                Decisiones Proactivas.{' '}
+                Anticípate a la Avería.{' '}
                 <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent underline decoration-cyan-500/20 underline-offset-4">
-                  Mantenimiento Predictivo
+                  Telemetría Avanzada
                 </span>{' '}
-                para Flotas Marítimas.
+                y Análisis del Motor con IA.
               </h1>
 
               {/* Subtitle */}
