@@ -117,10 +117,10 @@ export default function ProblemAndSolution() {
               ARQUITECTURA INTEGRAL DE DIAGNÓSTICO
             </span>
             <h2 className="font-display text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
-              Flujo de Datos: Del CAN-Bus a tu Pantalla
+              Ingeniería de Datos: Del Motor J1939 a los Monitores Online
             </h2>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-2xl mx-auto">
-              Simarp conecta e integra en tiempo real la telemetría del remolcador, el análisis de fatiga por Inteligencia Artificial y la consolidación de dashboards en la nube.
+            <p className="text-slate-400 text-sm leading-relaxed max-w-2xl mx-auto font-sans">
+              Capturamos de forma no intrusiva los datos de la ECU y sensores de vibración, procesándolos mediante modelos de IA para centralizar el monitoreo operativo de tu flota en la nube.
             </p>
           </div>
 
