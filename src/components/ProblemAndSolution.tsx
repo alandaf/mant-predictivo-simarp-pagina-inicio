@@ -26,7 +26,7 @@ export default function ProblemAndSolution() {
               <h2 className="font-display text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 El mantenimiento preventivo ya no es suficiente.
               </h2>
-              <p className="text-slate-350 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                 Cambiar piezas mecánicas basándose únicamente en horas de uso acumuladas es ineficiente y costoso. Por otro lado, esperar a que suene una alarma en la cabina significa que la falla catastrófica ya ocurrió.
               </p>
               <div className="p-4 bg-slate-900/40 rounded-lg border border-slate-800 border-l-4 border-l-rose-500/80 text-xs text-slate-300 leading-relaxed font-mono">
@@ -40,7 +40,7 @@ export default function ProblemAndSolution() {
               {/* Problem Card 1 */}
               <motion.div 
                 whileHover={{ y: -4 }}
-                className="bg-slate-900/35 p-6 rounded-lg border border-slate-850 space-y-4 backdrop-blur-sm"
+                className="bg-slate-900/35 p-6 rounded-lg border border-slate-800 space-y-4 backdrop-blur-sm"
               >
                 <div className="bg-rose-500/10 p-2.5 rounded-sm text-rose-400 w-fit border border-rose-500/20">
                   <Clock className="w-5 h-5" />
@@ -56,7 +56,7 @@ export default function ProblemAndSolution() {
               {/* Problem Card 2 */}
               <motion.div 
                 whileHover={{ y: -4 }}
-                className="bg-slate-900/35 p-6 rounded-lg border border-slate-850 space-y-4 backdrop-blur-sm"
+                className="bg-slate-900/35 p-6 rounded-lg border border-slate-800 space-y-4 backdrop-blur-sm"
               >
                 <div className="bg-rose-500/10 p-2.5 rounded-sm text-rose-400 w-fit border border-rose-500/20">
                   <ShieldX className="w-5 h-5" />
@@ -72,7 +72,7 @@ export default function ProblemAndSolution() {
               {/* Problem Card 3 */}
               <motion.div 
                 whileHover={{ y: -4 }}
-                className="bg-slate-900/35 p-6 rounded-lg border border-slate-850 space-y-4 backdrop-blur-sm"
+                className="bg-slate-900/35 p-6 rounded-lg border border-slate-800 space-y-4 backdrop-blur-sm"
               >
                 <div className="bg-rose-500/10 p-2.5 rounded-sm text-rose-400 w-fit border border-rose-500/20">
                   <HelpCircle className="w-5 h-5" />
@@ -214,7 +214,7 @@ export default function ProblemAndSolution() {
           </div>
 
           {/* Lower trust anchor banner */}
-          <div className="bg-gradient-to-r from-slate-950 via-slate-905 via-slate-900 to-slate-950 p-5 rounded-lg border border-slate-850 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="bg-gradient-to-r from-slate-950 via-slate-900 via-slate-900 to-slate-950 p-5 rounded-lg border border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <div className="flex gap-3 items-center text-left">
               <div className="bg-cyan-500/15 p-2 rounded-sm text-cyan-400 hidden sm:block border border-cyan-500/20">
                 <Network className="w-5 h-5 text-cyan-400" />
@@ -225,7 +225,7 @@ export default function ProblemAndSolution() {
               </div>
             </div>
             <div className="flex gap-2 items-center text-xs text-slate-200 font-mono bg-slate-950 px-4 py-2 rounded-sm border border-slate-800">
-              <ShieldCheck className="w-4 h-4 text-cyan-450 animate-pulse" />
+              <ShieldCheck className="w-4 h-4 text-cyan-400 animate-pulse" />
               <span className="uppercase tracking-widest font-bold text-[10px] text-cyan-400">TELEMETRÍA 100% AUDITABLE</span>
             </div>
           </div>

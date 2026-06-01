@@ -43,7 +43,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
         {/* Sliders Input Area */}
         <div className="lg:col-span-6 space-y-6 lg:space-y-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/25 rounded-sm text-cyan-455 text-xs font-mono font-bold uppercase tracking-[0.15em] mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/25 rounded-sm text-cyan-400 text-xs font-mono font-bold uppercase tracking-[0.15em] mb-3">
               <Calculator className="w-3.5 h-3.5 text-cyan-400" /> Simulador de Rendimiento Económico
             </div>
             <h3 className="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">
@@ -129,8 +129,8 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
               <p className="text-[10px] text-slate-500 leading-relaxed font-mono">
                 *Incluye días de inactividad comercial, fletes retrasados, repuestos de emergencia y remolcadores.
               </p>
-              <div className="text-[9.5px] text-slate-550 border-t border-slate-850 pt-3 mt-3 text-slate-500 space-y-1 font-sans">
-                <span className="font-semibold text-slate-450 block uppercase tracking-wider text-[10px] mb-1">Metodología y Fuentes del Modelo de Retorno:</span>
+              <div className="text-[9.5px] text-slate-500 border-t border-slate-800 pt-3 mt-3 text-slate-500 space-y-1 font-sans">
+                <span className="font-semibold text-slate-400 block uppercase tracking-wider text-[10px] mb-1">Metodología y Fuentes del Modelo de Retorno:</span>
                 <p>
                   • <strong>Prevención de Fallas:</strong> Frecuencia promedio de 0.4 fallas de maquinaria al año por buque. Costo unitario conservador de USD 250,000 en base al <em>Machinery Damage Report</em> de <strong>The Swedish Club</strong> (donde los siniestros promedio en motores principales superan los USD 650,000).
                 </p>
@@ -217,11 +217,12 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
           </div>
 
           <div className="pt-6 border-t border-slate-900/60 mt-6 space-y-4">
-            <div className="p-3.5 bg-cyan-950/20 rounded-sm border border-cyan-900/30 text-xs text-slate-350 leading-normal font-sans">
+            <div className="p-3.5 bg-cyan-950/20 rounded-sm border border-cyan-900/30 text-xs text-slate-300 leading-normal font-sans">
               🛡️ <strong>Integración de Datos No Intrusiva:</strong> El modelado predictivo de pruebas emula lecturas pasivas del bus CAN, garantizando cero interferencias con la electrónica y la garantía original de los equipos.
             </div>
             
             <button
+              type="button"
               onClick={onContactClick}
               className="w-full bg-cyan-600 hover:bg-cyan-500 text-slate-950 py-3.5 rounded-sm font-bold text-xs tracking-widest cursor-pointer transform hover:-translate-y-0.5 transition-all duration-150 shadow-md shadow-cyan-950/25 flex items-center justify-center gap-2 uppercase"
             >

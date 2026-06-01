@@ -620,7 +620,7 @@ export default function TelemetrySimulator() {
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-850 rounded-sm p-4 lg:p-6 shadow-2xl relative">
+    <div className="bg-slate-900 border border-slate-800 rounded-sm p-4 lg:p-6 shadow-2xl relative">
       
       {/* Background decoration grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] bg-[size:16px_16px] opacity-15 pointer-events-none" />
@@ -647,7 +647,7 @@ export default function TelemetrySimulator() {
                 <Radio className="w-3.5 h-3.5 animate-pulse" /> Enlace OK
               </span>
             ) : (
-              <span className="text-[10px] text-rose-450 font-mono flex items-center gap-1">
+              <span className="text-[10px] text-rose-400 font-mono flex items-center gap-1">
                 <RefreshCw className="w-3 h-3 animate-spin" /> Conectando...
               </span>
             )}
@@ -662,11 +662,11 @@ export default function TelemetrySimulator() {
         </div>
 
         {/* Quick specs pill */}
-        <div className="flex flex-row flex-wrap items-center gap-3 text-xs bg-slate-950 p-2 rounded-sm border border-slate-850/90 font-mono text-slate-350">
+        <div className="flex flex-row flex-wrap items-center gap-3 text-xs bg-slate-950 p-2 rounded-sm border border-slate-800/90 font-mono text-slate-300">
           <div>Hrs Motor: <span className="text-white font-bold">{state.engine_hours.toFixed(2)} Hrs</span></div>
-          <div className="text-slate-750">|</div>
-          <div>Batería: <span className="text-cyan-450 font-bold">{state.battery_voltage.toFixed(1)}V</span></div>
-          <div className="text-slate-750">|</div>
+          <div className="text-slate-700">|</div>
+          <div>Batería: <span className="text-cyan-400 font-bold">{state.battery_voltage.toFixed(1)}V</span></div>
+          <div className="text-slate-700">|</div>
           <div>Carga: <span className="text-cyan-400 font-bold">{state.load.toFixed(0)}%</span></div>
         </div>
       </div>
@@ -746,12 +746,13 @@ export default function TelemetrySimulator() {
                   const active = state.power_lever === pos && state.running;
                   return (
                     <button
+                      type="button"
                       key={pos}
                       onClick={() => triggerAction('power', { lever: pos })}
                       className={`p-3 rounded-sm text-center text-[10px] font-bold uppercase border transition-colors cursor-pointer ${
                         active 
-                          ? 'bg-cyan-600 text-slate-950 border-cyan-500 font-black' 
-                          : 'bg-slate-900 border-slate-850 text-slate-400 hover:text-white hover:border-slate-800'
+                           ? 'bg-cyan-600 text-slate-950 border-cyan-500 font-black' 
+                           : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-800'
                       }`}
                     >
                       {labelMap[pos]}
@@ -760,11 +761,12 @@ export default function TelemetrySimulator() {
                 })}
               </div>
               <button
+                type="button"
                 onClick={() => triggerAction('power', { lever: 'STOP' })}
                 className={`w-full py-3 rounded-sm font-display font-black text-center text-xs uppercase cursor-pointer border transition-colors ${
                   state.power_lever === 'STOP' && state.running
                     ? 'bg-amber-500 text-slate-950 border-amber-400'
-                    : 'bg-slate-900 border-slate-850 text-slate-400 hover:text-white hover:border-slate-800'
+                    : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:border-slate-800'
                 }`}
               >
                 ⬛ PARADA / RALENTÍ
@@ -778,7 +780,7 @@ export default function TelemetrySimulator() {
               <span className="text-[10px] uppercase font-mono tracking-wider font-bold text-cyan-400">
                 Dirección Propulsor Azimutal (ASD)
               </span>
-              <span className="text-xs text-white font-mono font-bold bg-slate-900 px-1.5 py-0.5 border border-slate-850">
+              <span className="text-xs text-white font-mono font-bold bg-slate-900 px-1.5 py-0.5 border border-slate-800">
                 {state.azimuth_angle.toFixed(0)}°
               </span>
             </div>
@@ -832,9 +834,10 @@ export default function TelemetrySimulator() {
                   { deg: 270, label: 'BABR' }
                 ].map((val) => (
                   <button
+                    type="button"
                     key={val.deg}
                     onClick={() => triggerAction('azimuth', { angle: val.deg })}
-                    className="py-1 px-0.5 rounded-sm bg-slate-900 hover:bg-slate-800 text-[9px] font-bold font-mono text-slate-400 hover:text-white border border-slate-850/80 cursor-pointer"
+                    className="py-1 px-0.5 rounded-sm bg-slate-900 hover:bg-slate-800 text-[9px] font-bold font-mono text-slate-400 hover:text-white border border-slate-800/80 cursor-pointer"
                   >
                     {val.deg}° {val.label}
                   </button>
@@ -988,7 +991,7 @@ export default function TelemetrySimulator() {
                 <span className="block text-[8px] font-mono uppercase font-bold text-orange-400 tracking-wider">
                   Algoritmos de Desgaste (Streamlit)
                 </span>
-                <p className="text-[10px] text-slate-350 leading-relaxed font-sans">
+                <p className="text-[10px] text-slate-300 leading-relaxed font-sans">
                   Las correlaciones de temperatura, presión de lubricación y NOx están calibradas bajo el modelo predictivo del motor.
                 </p>
                 <a 
@@ -1042,7 +1045,7 @@ export default function TelemetrySimulator() {
                         </span>
                         
                         <span className={`absolute bottom-1 left-0 right-0 text-[8px] font-mono text-center leading-none ${
-                          isCylinder8Misfire ? 'text-rose-455 font-bold animate-pulse' : 'text-white'
+                          isCylinder8Misfire ? 'text-rose-400 font-bold animate-pulse' : 'text-white'
                         }`}>
                           {state.running ? Math.round(cylTemp) : '24'}°
                         </span>
@@ -1066,8 +1069,8 @@ export default function TelemetrySimulator() {
               <div className="text-slate-600">[{new Date().toLocaleTimeString('es-CL')}] Escuchando tramas de puerto CAN-Bus en red marina local...</div>
               {state.maintenance_logs.map((log, index) => (
                 <div key={index} className="leading-normal">
-                  <span className="text-slate-650">[{log.time}]</span>{' '}
-                  <span className="text-cyan-405 font-medium">{log.event}</span>{' '}
+                  <span className="text-slate-500">[{log.time}]</span>{' '}
+                  <span className="text-cyan-400 font-medium">{log.event}</span>{' '}
                   <span className="text-slate-500">• {log.status}</span>
                 </div>
               ))}
@@ -1086,8 +1089,8 @@ export default function TelemetrySimulator() {
               state.eco_status === 'ECO' 
                 ? 'bg-emerald-950/30 text-emerald-400' 
                 : state.eco_status === 'ALTO_CONSUMO' 
-                  ? 'bg-rose-950/30 text-rose-455' 
-                  : 'bg-slate-900 text-slate-350'
+                  ? 'bg-rose-950/30 text-rose-400' 
+                  : 'bg-slate-900 text-slate-300'
             }`}>
               {state.eco_status}
             </span>
@@ -1126,13 +1129,13 @@ export default function TelemetrySimulator() {
           
           {/* Fault Sliders */}
           <div className="bg-slate-950 border border-slate-900 rounded-sm p-3.5 space-y-4">
-            <h5 className="text-[10px] font-bold font-sans text-slate-450 uppercase tracking-wider">Fallas de Simulación</h5>
+            <h5 className="text-[10px] font-bold font-sans text-slate-400 uppercase tracking-wider">Fallas de Simulación</h5>
             
             {/* Coolant overheated */}
             <div className="space-y-1.5">
               <div className="flex justify-between text-[11px] font-mono">
                 <span className="text-slate-400">Estrés Térmico Camisa</span>
-                <span className="text-rose-455 font-bold">+{state.coolant_offset} °C</span>
+                <span className="text-rose-400 font-bold">+{state.coolant_offset} °C</span>
               </div>
               <input 
                 type="range" 
@@ -1166,7 +1169,7 @@ export default function TelemetrySimulator() {
           {/* Injector misfire button & trailer resistance slider */}
           <div className="bg-slate-950 border border-slate-900 rounded-sm p-3.5 space-y-3 flex flex-col justify-between">
             <div className="space-y-3">
-              <h5 className="text-[10px] font-bold font-sans text-slate-450 uppercase tracking-wider">Severidad e Inyector #8</h5>
+              <h5 className="text-[10px] font-bold font-sans text-slate-400 uppercase tracking-wider">Severidad e Inyector #8</h5>
               
               <div className="flex justify-between items-center bg-slate-900/60 p-2.5 rounded-sm border border-slate-900">
                 <div>
@@ -1209,7 +1212,7 @@ export default function TelemetrySimulator() {
           {/* Maintenance Actions (Operator center) */}
           <div className="bg-slate-950 border border-slate-900 rounded-sm p-3.5 space-y-2.5 flex flex-col justify-between">
             <div>
-              <h5 className="text-[10px] font-bold font-sans text-slate-450 uppercase tracking-wider mb-2.5">Acciones de Mantenimiento Correctivo</h5>
+              <h5 className="text-[10px] font-bold font-sans text-slate-400 uppercase tracking-wider mb-2.5">Acciones de Mantenimiento Correctivo</h5>
               <p className="text-[9px] text-slate-500 leading-normal mb-3">
                 Sustituye componentes desgastados o rellena fluidos para restablecer parámetros basales seguros e incrementar el RUL.
               </p>
@@ -1217,22 +1220,25 @@ export default function TelemetrySimulator() {
 
             <div className="space-y-2">
               <button 
+                type="button"
                 onClick={() => triggerAction('maintenance', { component: 'oil_filter' })}
-                className="w-full py-2 px-3 bg-slate-900 hover:bg-slate-800 border border-slate-850 hover:border-slate-800 text-slate-300 hover:text-white rounded-sm text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                className="w-full py-2 px-3 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-800 text-slate-300 hover:text-white rounded-sm text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
               >
                 <Wrench className="w-3.5 h-3.5 text-orange-400" /> Reemplazar Filtro Aceite
               </button>
               
               <button 
+                type="button"
                 onClick={() => triggerAction('maintenance', { component: 'injector_8' })}
-                className="w-full py-2 px-3 bg-slate-900 hover:bg-slate-800 border border-slate-850 hover:border-slate-800 text-slate-300 hover:text-white rounded-sm text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                className="w-full py-2 px-3 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-800 text-slate-300 hover:text-white rounded-sm text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
               >
                 <Zap className="w-3.5 h-3.5 text-cyan-400" /> Reemplazar Inyector #8
               </button>
 
               <button 
+                type="button"
                 onClick={() => triggerAction('control', { def_level: 99.9 })}
-                className="w-full py-2 px-3 bg-slate-900/60 hover:bg-slate-800/80 border border-slate-850 text-slate-400 hover:text-cyan-400 rounded-sm text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                className="w-full py-2 px-3 bg-slate-900/60 hover:bg-slate-800/80 border border-slate-800 text-slate-400 hover:text-cyan-400 rounded-sm text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
               >
                 <Droplets className="w-3.5 h-3.5 text-cyan-500 animate-pulse" /> Recargar Urea (DEF)
               </button>

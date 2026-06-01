@@ -76,29 +76,30 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('problema')}
-              className="text-slate-350 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
+              className="text-slate-300 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
             >
               El Problema
             </button>
             <button
               onClick={() => scrollToSection('solucion')}
-              className="text-slate-350 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
+              className="text-slate-300 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
             >
               La Solución
             </button>
             <button
               onClick={() => scrollToSection('calculadora')}
-              className="text-slate-350 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
+              className="text-slate-300 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
             >
               Calculadora ROI
             </button>
             <button
               onClick={() => scrollToSection('beneficios')}
-              className="text-slate-350 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
+              className="text-slate-300 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
             >
               Beneficios
             </button>
             <button
+              type="button"
               onClick={() => scrollToSection('valores')}
               className="text-slate-200 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer flex items-center gap-1.5"
             >
@@ -110,6 +111,7 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           {/* CTA & Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <button
+              type="button"
               onClick={onContactClick}
               className="bg-cyan-600 hover:bg-cyan-500 text-slate-950 px-5 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150"
             >
@@ -120,6 +122,7 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-300 hover:text-white focus:outline-none p-2"
               aria-label="Toggle menu"

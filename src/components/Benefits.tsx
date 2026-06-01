@@ -30,7 +30,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
       description: 'Control de la eficiencia térmica de la combustión. Pequeños desajustes en la inyección aumentan el consumo de combustible hasta un 3.5%; Simarp alinea la inyección previniendo sobregasto y emisión de hollín.',
       accent: 'Ahorro Diésel del 1.8%',
       icon: Droplets,
-      color: 'text-cyan-350',
+      color: 'text-cyan-300',
       bg: 'bg-cyan-500/10'
     }
   ];

@@ -58,17 +58,17 @@ export default function App() {
                 </span>{' '}
                 y Análisis del Motor con IA.
               </h1>
-
               {/* Subtitle */}
-              <p className="text-slate-350 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
+              <p className="text-slate-300 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
                 Portal de demostración y modelado predictivo para salas de máquinas. Simulamos la telemetría J1939 de motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para analizar anomalías operativas y proyectar fallas de forma proactiva. Actualmente operamos sobre un simulador, pero el sistema está diseñado y construido para conectarse a motores reales en operación.
               </p>
 
               {/* Actions CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
+                  type="button"
                   onClick={openDemoModal}
-                  className="bg-cyan-600 hover:bg-cyan-505 hover:bg-cyan-500 text-slate-950 px-8 py-4 rounded-sm font-bold tracking-widest text-xs uppercase hover:shadow-lg hover:shadow-cyan-950/20 active:scale-98 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
+                  className="bg-cyan-600 hover:bg-cyan-500 text-slate-950 px-8 py-4 rounded-sm font-bold tracking-widest text-xs uppercase hover:shadow-lg hover:shadow-cyan-950/20 active:scale-98 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Solicitar Reunión</span>
                   <ChevronRight className="w-4 h-4" />
@@ -76,7 +76,7 @@ export default function App() {
                 
                 <a
                   href="#problema"
-                  className="bg-slate-900/60 hover:bg-slate-850/80 text-white border border-slate-800 px-6 py-4 rounded-sm font-semibold tracking-wide text-center flex items-center justify-center gap-2 cursor-pointer transition-all duration-150 text-sm"
+                  className="bg-slate-900/60 hover:bg-slate-800/80 text-white border border-slate-800 px-6 py-4 rounded-sm font-semibold tracking-wide text-center flex items-center justify-center gap-2 cursor-pointer transition-all duration-150 text-sm"
                 >
                   <span>Ver Especificaciones Técnicas</span>
                   <ArrowRight className="w-4 h-4 text-slate-500" />
@@ -125,6 +125,9 @@ export default function App() {
                 <img 
                   src="/harbor_tugboat.png" 
                   alt="Remolcador de puerto operando" 
+                  width={500}
+                  height={256}
+                  loading="lazy"
                   className="w-full h-64 object-cover rounded-sm grayscale brightness-90 relative z-10 border border-slate-800"
                 />
                 

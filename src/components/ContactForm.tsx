@@ -75,7 +75,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
           <h3 className="font-display text-2xl font-bold text-white tracking-tight">
             ¡Estudio de Factibilidad Iniciado!
           </h3>
-          <p className="text-slate-350 text-sm max-w-md mx-auto leading-relaxed">
+          <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
             Estimado/a <strong>{formData.nombre}</strong>, hemos registrado tu solicitud para la flota de <strong>{formData.compania}</strong>. 
           </p>
           <div className="bg-slate-900 border border-slate-800 rounded-sm p-4 text-xs text-slate-400 max-w-sm mx-auto space-y-2 text-left">
@@ -86,8 +86,9 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
           <div className="pt-4">
             {isModal && onClose ? (
               <button
+                type="button"
                 onClick={onClose}
-                className="bg-slate-800 hover:bg-slate-750 text-white px-5 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-colors duration-100 cursor-pointer"
+                className="bg-slate-800 hover:bg-slate-700 text-white px-5 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-colors duration-100 cursor-pointer"
               >
                 Cerrar Ventana
               </button>
@@ -138,7 +139,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
           {/* Double Column Grid: Nombre & Cargo */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label className="text-slate-350 text-xs font-medium flex items-center gap-1.5">
+              <label className="text-slate-300 text-xs font-medium flex items-center gap-1.5">
                 <User className="w-3.5 h-3.5 text-slate-500" /> Nombre de Contacto *
               </label>
               <input
@@ -147,12 +148,12 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. Ing. Carlos Mendoza"
                 value={formData.nombre}
                 onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-500 transition-colors duration-150"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-slate-350 text-xs font-medium flex items-center gap-1.5">
+              <label className="text-slate-300 text-xs font-medium flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5 text-slate-500" /> Cargo / Rango a Bordo
               </label>
               <input
@@ -160,7 +161,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. Superintendente de Flota / Jefe de Máquinas"
                 value={formData.cargo}
                 onChange={(e) => setFormData({ ...formData, cargo: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-500 transition-colors duration-150"
               />
             </div>
           </div>
@@ -168,7 +169,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
           {/* Double Column Grid: Email & Compania */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label className="text-slate-355 text-xs font-medium flex items-center gap-1.5">
+              <label className="text-slate-300 text-xs font-medium flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-slate-500" /> Correo Corporativo *
               </label>
               <input
@@ -177,12 +178,12 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. c.mendoza@navierasur.cl"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-500 transition-colors duration-150"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-slate-355 text-xs font-medium flex items-center gap-1.5">
+              <label className="text-slate-300 text-xs font-medium flex items-center gap-1.5">
                 <Building className="w-3.5 h-3.5 text-slate-500" /> Compañía Naviera / Armador *
               </label>
               <input
@@ -191,7 +192,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 placeholder="Ej. Naviera del Sur S.A."
                 value={formData.compania}
                 onChange={(e) => setFormData({ ...formData, compania: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-600 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-500 transition-colors duration-150"
               />
             </div>
           </div>
@@ -199,13 +200,13 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
           {/* Double Column Grid: Fleet details & Engine brands */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label className="text-slate-355 text-xs font-medium flex items-center gap-1.5">
+              <label className="text-slate-300 text-xs font-medium flex items-center gap-1.5">
                 <Ship className="w-3.5 h-3.5 text-slate-400" /> Tamaño de Flota Activa
               </label>
               <select
                 value={formData.flotaSize}
                 onChange={(e) => setFormData({ ...formData, flotaSize: parseInt(e.target.value) })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
               >
                 <option value="1">1 Buque</option>
                 <option value="3">2 a 5 Buques</option>
@@ -215,13 +216,13 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-slate-355 text-xs font-medium flex items-center gap-1.5">
+              <label className="text-slate-300 text-xs font-medium flex items-center gap-1.5">
                 <Lock className="w-3.5 h-3.5 text-slate-500" /> Tipo de Motor Predominante
               </label>
               <select
                 value={formData.motorBrand}
                 onChange={(e) => setFormData({ ...formData, motorBrand: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
               >
                 <option value="Diésel 4 Tiempos (Alta Velocidad)">Diésel 4 Tiempos (Alta Velocidad)</option>
                 <option value="Diésel 4 Tiempos (Media Velocidad)">Diésel 4 Tiempos (Media Velocidad)</option>
@@ -234,7 +235,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
 
           {/* Textarea: Message */}
           <div className="space-y-1.5">
-            <label className="text-slate-355 text-xs font-medium">
+            <label className="text-slate-300 text-xs font-medium">
               Detalle de Motores o Consulta (Opcional)
             </label>
             <textarea
@@ -242,7 +243,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
               placeholder="Ej. Motores principales de 4 tiempos y auxiliares de alta velocidad. Interesados en monitoreo de vibración y temperaturas de escape."
               value={formData.mensaje}
               onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
-              className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-650 transition-colors duration-150"
+              className="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/20 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-500 transition-colors duration-150"
             />
           </div>
 
@@ -287,6 +288,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
         <div className="bg-slate-900 border border-slate-800 rounded-sm w-full max-w-lg p-5 lg:p-7 shadow-2xl relative z-10 text-white overflow-hidden">
           <div className="absolute top-0 right-0 p-3">
             <button 
+              type="button"
               onClick={onClose}
               className="text-slate-400 hover:text-white p-1 cursor-pointer"
             >
@@ -318,7 +320,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
   }
 
   return (
-    <div className="bg-slate-900/40 border border-slate-850 rounded-sm p-6 lg:p-8 relative">
+    <div className="bg-slate-900/40 border border-slate-800 rounded-sm p-6 lg:p-8 relative">
       <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl pointer-events-none" />
       {formContent}
     </div>

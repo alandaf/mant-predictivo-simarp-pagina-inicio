@@ -71,7 +71,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
             const Icon = platform.icon;
             
             const cardContent = (
-              <div className="h-full flex flex-col justify-between p-6 lg:p-8 bg-slate-900/40 backdrop-blur-md border border-slate-850 rounded-sm relative overflow-hidden group hover:border-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300">
+              <div className="h-full flex flex-col justify-between p-6 lg:p-8 bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-sm relative overflow-hidden group hover:border-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-950/20 transition-all duration-300">
                 {/* Glow Background effect */}
                 <div className={`absolute -inset-px bg-gradient-to-br ${platform.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
                 
@@ -81,7 +81,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
                     <span className="text-[9px] font-mono text-slate-500 font-bold uppercase tracking-widest bg-slate-950 px-2 py-0.5 rounded-sm border border-slate-900">
                       {platform.subtitle}
                     </span>
-                    <div className={`p-2.5 bg-slate-950 border border-slate-850 rounded-sm ${platform.color} group-hover:scale-105 transition-transform duration-200`}>
+                    <div className={`p-2.5 bg-slate-950 border border-slate-800 rounded-sm ${platform.color} group-hover:scale-105 transition-transform duration-200`}>
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
@@ -91,7 +91,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
                     <h3 className="font-display text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                       {platform.title}
                     </h3>
-                    <p className="text-slate-450 text-[12.5px] leading-relaxed">
+                    <p className="text-slate-400 text-[12.5px] leading-relaxed">
                       {platform.description}
                     </p>
                   </div>
