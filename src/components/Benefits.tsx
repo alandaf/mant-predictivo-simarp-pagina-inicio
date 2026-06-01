@@ -132,7 +132,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
                 <Cpu className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-slate-100">Hardware Listo para Altamar</p>
-                  <p className="text-slate-400">Emulamos la adquisición J1939 para demostraciones, pero nuestro dispositivo físico está listo para conectarse al bus CAN del motor y recibir datos reales a bordo.</p>
+                  <p className="text-slate-400">Emulamos la adquisición J1939 para demostraciones, pero nuestro dispositivo físico se conecta a la ECU del motor para capturar datos en vivo y permite integrar sensores de vibración si es requerido.</p>
                 </div>
               </div>
             </div>
