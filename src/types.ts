@@ -1,4 +1,4 @@
-export type EngineBrand = 'Caterpillar' | 'Wärtsilä' | 'MaK';
+export type EngineBrand = 'AltaVelocidad' | 'MediaVelocidad' | 'BajaVelocidad';
 
 export interface TelemetryData {
   rpm: number;

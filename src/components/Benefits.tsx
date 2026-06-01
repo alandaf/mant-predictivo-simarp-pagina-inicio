@@ -143,7 +143,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
             <blockquote className="space-y-4">
               <span className="text-[36px] font-serif text-slate-600 block leading-none">“</span>
               <p className="text-xs text-slate-300 italic leading-relaxed font-sans -mt-4">
-                "Haber implementado el nodo Simarp en nuestros cargueros nos evitó una varada crítica de motor Caterpillar en el Pacífico medio. El panel nos marcaba temperaturas aceptables, pero el algoritmo predijo la anomalía térmica del inyector con 4 días de anticipación. Volvimos a puerto seguros."
+                "Haber implementado el nodo Simarp en nuestros cargueros nos evitó una varada crítica de un motor principal en el Pacífico medio. El panel nos marcaba temperaturas aceptables, pero el algoritmo predijo la anomalía térmica del inyector con 4 días de anticipación. Volvimos a puerto seguros."
               </p>
               <footer className="pt-2">
                 <cite className="block text-xs font-bold text-slate-200 not-italic">

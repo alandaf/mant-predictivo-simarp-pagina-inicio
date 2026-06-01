@@ -390,29 +390,29 @@ export default function TelemetrySimulator() {
         // 9. AI Copilot Diagnostics
         let baseScore = 100;
         let severity = "ok";
-        let message = "Caterpillar CAT 3516B: " + Math.round(newState.propeller_rpm) + " RPM | Empuje: " + newState.thrust_total.toFixed(1) + " kN";
-        let prediction = "ESTABLE (RUL: 98.7% - Streamlit CAT)";
+        let message = "Motor Principal (4T): " + Math.round(newState.propeller_rpm) + " RPM | Empuje: " + newState.thrust_total.toFixed(1) + " kN";
+        let prediction = "ESTABLE (RUL: 98.7% - Streamlit)";
 
         if (!newState.running) {
           prediction = "MOTOR DETENIDO (SINC.)";
-          message = "Sistema Listo • Monitoreo Caterpillar CAT calibrado";
+          message = "Sistema Listo • Monitoreo de Motor Principal calibrado";
         } else {
           if (newState.break_injector) {
             baseScore -= 66;
             severity = "danger";
-            message = "❌ ALERTA ROJA (Caterpillar CAT): Falla de encendido (Misfire) cilindro #8. Pérdida de compresión por soplado.";
+            message = "❌ ALERTA ROJA (Motor Principal): Falla de encendido (Misfire) cilindro #8. Pérdida de compresión por soplado.";
             prediction = "CRÍTICO: Umbral Blow-by superado en Analítica Streamlit. Requiere Overhaul.";
           } else if (newState.filter_clog > 40) {
             const clogFactor = newState.filter_clog;
             baseScore -= Math.round(clogFactor * 0.4);
             if (newState.filter_clog > 70) {
               severity = "danger";
-              message = `⚠️ ADVERTENCIA Caterpillar (Falla de Caudal): Presión de aceite baja por filtro obstruido (${clogFactor.toFixed(0)}%).`;
+              message = `⚠️ ADVERTENCIA (Falla de Caudal): Presión de aceite baja por filtro obstruido (${clogFactor.toFixed(0)}%).`;
               prediction = "URGENTE: Degradación severa según regresión de desgaste de cojinetes.";
             } else {
               severity = "warning";
               message = `⚠️ Anomalía de Lubricación: Filtro saturado al ${clogFactor.toFixed(0)}%. Resistencia detectada en modelo predictivo.`;
-              prediction = "ALERTA TEMPRANA: Desviación de curva Caterpillar CAT en Streamlit.";
+              prediction = "ALERTA TEMPRANA: Desviación de curva nominal en Streamlit.";
             }
           } else if (newState.temp > 95) {
             baseScore -= 20;
@@ -969,7 +969,7 @@ export default function TelemetrySimulator() {
                   <Brain className="w-4 h-4 text-orange-400" />
                 </div>
                 <div>
-                  <span className="block text-[8px] font-mono uppercase text-slate-500 tracking-wider">Pronóstico & Analítica Caterpillar</span>
+                  <span className="block text-[8px] font-mono uppercase text-slate-500 tracking-wider">Pronóstico & Analítica de Motores</span>
                   <span className="block text-[11px] font-bold text-white uppercase tracking-wide">Simarp-Edge Neural Core</span>
                 </div>
               </div>
@@ -989,7 +989,7 @@ export default function TelemetrySimulator() {
                   Algoritmos de Desgaste (Streamlit)
                 </span>
                 <p className="text-[10px] text-slate-350 leading-relaxed font-sans">
-                  Las correlaciones de temperatura, presión de lubricación y NOx están calibradas bajo el modelo predictivo de Caterpillar CAT.
+                  Las correlaciones de temperatura, presión de lubricación y NOx están calibradas bajo el modelo predictivo del motor.
                 </p>
                 <a 
                   href="https://datosmotorcat.streamlit.app/"

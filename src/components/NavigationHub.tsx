@@ -25,7 +25,7 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
     {
       title: 'Copiloto de IA (Streamlit)',
       subtitle: 'APRENDIZAJE AUTOMÁTICO',
-      description: 'Modelos predictivos de desgaste de camisas de fuerza, regresión lineal de lubricación y estimación de Vida Útil Restante (RUL) de motores Caterpillar.',
+      description: 'Modelos predictivos de desgaste de camisas de fuerza, regresión lineal de lubricación y estimación de Vida Útil Restante (RUL) de motores marinos de gran cilindrada.',
       icon: Brain,
       color: 'text-orange-400',
       borderColor: 'group-hover:border-orange-500/30',

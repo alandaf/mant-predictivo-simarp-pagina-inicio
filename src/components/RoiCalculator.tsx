@@ -209,7 +209,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
 
           <div className="pt-6 border-t border-slate-900 mt-6 space-y-4">
             <div className="p-3.5 bg-cyan-950/15 rounded-sm border border-cyan-900/35 text-xs text-slate-300 leading-normal">
-              🛡️ <strong>Garantía Simarp:</strong> Integramos el hardware sin soldaduras, empalmes o modificación alguna de la garantía de fábrica Caterpillar, MaK o Wärtsilä.
+              🛡️ <strong>Garantía Simarp:</strong> Integramos el hardware sin soldaduras, empalmes o modificación alguna de la garantía original del fabricante del motor.
             </div>
             
             <button

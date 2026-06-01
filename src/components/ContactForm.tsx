@@ -16,7 +16,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
     cargo: '',
     compania: '',
     flotaSize: 3,
-    motorBrand: 'Caterpillar',
+    motorBrand: 'Diésel 4 Tiempos (Alta Velocidad)',
     mensaje: ''
   });
 
@@ -75,7 +75,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                     cargo: '',
                     compania: '',
                     flotaSize: 3,
-                    motorBrand: 'Caterpillar',
+                    motorBrand: 'Diésel 4 Tiempos (Alta Velocidad)',
                     mensaje: ''
                   });
                 }}
@@ -190,18 +190,18 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
 
             <div className="space-y-1.5">
               <label className="text-slate-355 text-xs font-medium flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5 text-slate-500" /> Fabricante de Motores Predominante
+                <Lock className="w-3.5 h-3.5 text-slate-500" /> Tipo de Motor Predominante
               </label>
               <select
                 value={formData.motorBrand}
                 onChange={(e) => setFormData({ ...formData, motorBrand: e.target.value })}
                 className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-slate-300 transition-colors duration-150"
               >
-                <option value="Caterpillar">Caterpillar / MaK</option>
-                <option value="Wärtsilä">Wärtsilä</option>
-                <option value="MAN">MAN Energy Solutions</option>
-                <option value="Cummins">Cummins Marine</option>
-                <option value="Otros">Múltiples / Otros Marinos</option>
+                <option value="Diésel 4 Tiempos (Alta Velocidad)">Diésel 4 Tiempos (Alta Velocidad)</option>
+                <option value="Diésel 4 Tiempos (Media Velocidad)">Diésel 4 Tiempos (Media Velocidad)</option>
+                <option value="Diésel 2 Tiempos (Baja Velocidad)">Diésel 2 Tiempos (Baja Velocidad)</option>
+                <option value="Motores Auxiliares / Generadores">Motores Auxiliares / Generadores</option>
+                <option value="Múltiples / Otros">Múltiples / Otros</option>
               </select>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
             </label>
             <textarea
               rows={3}
-              placeholder="Ej. Motores principales CAT 3516 y auxiliares Cummins. Interesados en monitoreo de vibración y temperaturas de escape."
+              placeholder="Ej. Motores principales de 4 tiempos y auxiliares de alta velocidad. Interesados en monitoreo de vibración y temperaturas de escape."
               value={formData.mensaje}
               onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
               className="w-full bg-slate-950 border border-slate-850 focus:border-cyan-550 focus:ring-1 focus:ring-cyan-550 focus:outline-none rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-slate-650 transition-colors duration-150"

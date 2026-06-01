@@ -54,7 +54,7 @@ export default function App() {
 
               {/* Subtitle */}
               <p className="text-slate-350 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
-                Monitoreo en tiempo real de motores diésel marinos <strong className="text-slate-100 font-semibold">Caterpillar, Wärtsilä, MaK</strong>. Detectamos desgaste y anomalías térmicas antes de que ocurra una avería en altamar.
+                Monitoreo en tiempo real de motores diésel marinos <strong className="text-slate-100 font-semibold">principales y auxiliares</strong>. Detectamos desgaste y anomalías térmicas antes de que ocurra una avería en altamar.
               </p>
 
               {/* Actions CTAs */}
@@ -82,11 +82,9 @@ export default function App() {
                   SOPORTE Y COMPATIBILIDAD INDUSTRIAL DIRECTA:
                 </span>
                 <div className="flex flex-wrap items-center gap-x-6 gap-y-3 font-display text-[15px] font-bold text-slate-400">
-                  <span className="hover:text-slate-200 transition-colors">CATERPILLAR® 3500</span>
+                  <span className="hover:text-slate-200 transition-colors">MOTORES DE ALTA VELOCIDAD</span>
                   <span className="text-slate-800">•</span>
-                  <span className="hover:text-slate-200 transition-colors">WÄRTSILÄ® 20/32</span>
-                  <span className="text-slate-800">•</span>
-                  <span className="hover:text-slate-200 transition-colors">MaK® M32C</span>
+                  <span className="hover:text-slate-200 transition-colors">MOTORES DE MEDIA VELOCIDAD</span>
                   <span className="text-slate-800">•</span>
                   <span className="hover:text-slate-200 transition-colors">SAE J1939 CAN BUS</span>
                 </div>
@@ -186,7 +184,7 @@ export default function App() {
                 </div>
                 <div className="flex gap-2 items-center text-slate-300">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                  <span>Compatibilidad garantizada con Caterpillar, Wärtsilä y MaK</span>
+                  <span>Compatibilidad garantizada con motores diésel marinos de media y alta velocidad</span>
                 </div>
                 <div className="flex gap-2 items-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />

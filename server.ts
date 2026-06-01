@@ -401,29 +401,29 @@ setInterval(() => {
   // 9. AI Copilot Diagnostics and Predictions
   let baseScore = 100;
   let severity = "ok";
-  let message = "Caterpillar CAT 3516B: " + Math.round(localState.propeller_rpm) + " RPM | Empuje: " + localState.thrust_total.toFixed(1) + " kN";
-  let prediction = "ESTABLE (RUL: 98.7% - Streamlit CAT)";
+  let message = "Motor Principal (4T): " + Math.round(localState.propeller_rpm) + " RPM | Empuje: " + localState.thrust_total.toFixed(1) + " kN";
+  let prediction = "ESTABLE (RUL: 98.7% - Streamlit)";
 
   if (!localState.running) {
     prediction = "MOTOR DETENIDO (SINC.)";
-    message = "Sistema Listo • Monitoreo Caterpillar CAT calibrado";
+    message = "Sistema Listo • Monitoreo de Motor Principal calibrado";
   } else {
     if (localState.break_injector) {
       baseScore -= 66;
       severity = "danger";
-      message = "❌ ALERTA ROJA (Caterpillar CAT): Falla de encendido (Misfire) cilindro #8. Pérdida de compresión por soplado.";
+      message = "❌ ALERTA ROJA (Motor Principal): Falla de encendido (Misfire) cilindro #8. Pérdida de compresión por soplado.";
       prediction = "CRÍTICO: Umbral Blow-by superado en Analítica Streamlit. Requiere Overhaul.";
     } else if (localState.filter_clog > 40) {
       const clogFactor = localState.filter_clog;
       baseScore -= Math.round(clogFactor * 0.4);
       if (localState.filter_clog > 70) {
         severity = "danger";
-        message = `⚠️ ADVERTENCIA Caterpillar (Falla de Caudal): Presión de aceite baja por filtro obstruido (${clogFactor.toFixed(0)}%).`;
+        message = `⚠️ ADVERTENCIA (Falla de Caudal): Presión de aceite baja por filtro obstruido (${clogFactor.toFixed(0)}%).`;
         prediction = "URGENTE: Degradación severa según regresión de desgaste de cojinetes.";
       } else {
         severity = "warning";
         message = `⚠️ Anomalía de Lubricación: Filtro saturado al ${clogFactor.toFixed(0)}%. Resistencia detectada en modelo predictivo.`;
-        prediction = "ALERTA TEMPRANA: Desviación de curva Caterpillar CAT en Streamlit.";
+        prediction = "ALERTA TEMPRANA: Desviación de curva nominal en Streamlit.";
       }
     } else if (localState.temp > 95) {
       baseScore -= 20;
