@@ -57,11 +57,11 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
           <div className="space-y-6">
             {/* Input 1: Fleet Size */}
             <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-1 text-sm">
                 <label className="text-slate-300 font-medium font-sans flex items-center gap-1.5">
-                  <Ship className="w-4 h-4 text-cyan-400" /> Tamaño de la Flota (Buques)
+                  <Ship className="w-4 h-4 text-cyan-400" /> Tamaño de la Flota
                 </label>
-                <span className="text-white font-mono font-bold bg-slate-950 px-2.5 py-0.5 rounded border border-slate-800">
+                <span className="text-white font-mono font-bold bg-slate-950 px-2.5 py-0.5 rounded border border-slate-800 w-fit">
                   {fleetSize} {fleetSize === 1 ? 'Buque' : 'Buques'}
                 </span>
               </div>
@@ -83,11 +83,11 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
 
             {/* Input 2: Maintenance cost per vessel */}
             <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-1 text-sm">
                 <label className="text-slate-300 font-medium font-sans flex items-center gap-1.5">
-                  <Coins className="w-4 h-4 text-cyan-400" /> Gasto de Mant. Correctivo/Preventivo Anual por Buque
+                  <Coins className="w-4 h-4 text-cyan-400" /> Gasto Mant. Anual / Buque
                 </label>
-                <span className="text-white font-mono font-bold bg-slate-950 px-2.5 py-0.5 rounded border border-slate-800">
+                <span className="text-white font-mono font-bold bg-slate-950 px-2.5 py-0.5 rounded border border-slate-800 w-fit">
                   {formatUSD(annualMaintPerBuque)}
                 </span>
               </div>
@@ -109,11 +109,11 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
 
             {/* Input 3: Unplanned Failure Cost */}
             <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-1 text-sm">
                 <label className="text-slate-300 font-medium font-sans flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-cyan-400" /> Costo Estimado de una Sola Avería Crítica en Altamar
+                  <ShieldCheck className="w-4 h-4 text-cyan-400" /> Costo de una Falla Crítica
                 </label>
-                <span className="text-white font-mono font-bold bg-slate-950 px-2.5 py-0.5 rounded border border-slate-800">
+                <span className="text-white font-mono font-bold bg-slate-950 px-2.5 py-0.5 rounded border border-slate-800 w-fit">
                   {formatUSD(unplannedFailureCost)}
                 </span>
               </div>
@@ -132,7 +132,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
               <div className="text-[9.5px] text-slate-550 border-t border-slate-850 pt-3 mt-3 text-slate-500 space-y-1 font-sans">
                 <span className="font-semibold text-slate-450 block uppercase tracking-wider text-[10px] mb-1">Metodología y Fuentes del Modelo de Retorno:</span>
                 <p>
-                  • <strong>Prevención de Averías:</strong> Frecuencia promedio de 0.4 fallas de maquinaria al año por buque. Costo unitario conservador de USD 250,000 en base al <em>Machinery Damage Report</em> de <strong>The Swedish Club</strong> (donde los siniestros promedio en motores principales superan los USD 650,000).
+                  • <strong>Prevención de Fallas:</strong> Frecuencia promedio de 0.4 fallas de maquinaria al año por buque. Costo unitario conservador de USD 250,000 en base al <em>Machinery Damage Report</em> de <strong>The Swedish Club</strong> (donde los siniestros promedio en motores principales superan los USD 650,000).
                 </p>
                 <p>
                   • <strong>Ahorro de Combustible:</strong> Coeficiente del 1.8% sustentado en reportes de eficiencia de <strong>Wärtsilä FOS (Fleet Optimisation Solutions)</strong> y guías de optimización de combustión de <strong>DNV</strong> (que proyectan un rango de 1.5% a 5% de ahorro mediante monitoreo térmico continuo).
@@ -148,9 +148,9 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
             <span className="text-xs text-cyan-400 font-mono uppercase tracking-[0.1em] block mb-1">
               Ahorros Anuales Totales Proyectados
             </span>
-            <div className="text-3xl lg:text-5xl font-display font-extrabold text-white leading-none tracking-tight">
+            <div className="text-2xl sm:text-3xl lg:text-5xl font-display font-extrabold text-white leading-none tracking-tight">
               {formatUSD(totalAnnualSavings)}{' '}
-              <span className="text-lg text-cyan-405 font-sans font-semibold block sm:inline mt-1 sm:mt-0 text-cyan-400">
+              <span className="text-base sm:text-lg text-cyan-400 font-sans font-semibold block mt-1 sm:inline sm:mt-0">
                 USD / Año
               </span>
             </div>
@@ -164,7 +164,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
                   </div>
                   <div>
                     <span className="text-[13px] text-slate-200 block font-semibold">
-                      Prevención de Averías Críticas
+                      Prevención de Fallas Críticas
                     </span>
                     <span className="text-xs text-slate-400">
                       Evitamos ≈{preventedFailures} fallas imprevistas mayores anuales.

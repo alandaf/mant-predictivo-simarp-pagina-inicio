@@ -51,8 +51,8 @@ export default function App() {
               </div>
 
               {/* H1 Main Title */}
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
-                Anticípate a la Avería.{' '}
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+                Anticípate a la Falla.{' '}
                 <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent underline decoration-cyan-500/20 underline-offset-4">
                   Telemetría Avanzada
                 </span>{' '}
@@ -60,7 +60,7 @@ export default function App() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-slate-350 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
+              <p className="text-slate-350 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
                 Portal de demostración y modelado predictivo para salas de máquinas. Simulamos la telemetría J1939 de motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para analizar anomalías operativas y proyectar fallas de forma proactiva. Actualmente operamos sobre un simulador, pero el sistema está diseñado y construido para conectarse a motores reales en operación.
               </p>
 
@@ -88,11 +88,11 @@ export default function App() {
                 <span className="text-[10px] text-slate-500 font-mono uppercase tracking-widest block font-medium">
                   MODELADO CONTEXTUAL Y PROTOCOLOS DE PRUEBA:
                 </span>
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 font-display text-[15px] font-bold text-slate-400">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-display text-[12px] sm:text-[15px] font-bold text-slate-400">
                   <span className="hover:text-slate-200 transition-colors">MOTORES DE ALTA VELOCIDAD</span>
-                  <span className="text-slate-800">•</span>
+                  <span className="text-slate-800 hidden sm:inline">•</span>
                   <span className="hover:text-slate-200 transition-colors">MOTORES DE MEDIA VELOCIDAD</span>
-                  <span className="text-slate-800">•</span>
+                  <span className="text-slate-800 hidden sm:inline">•</span>
                   <span className="hover:text-slate-200 transition-colors">SAE J1939 CAN BUS</span>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export default function App() {
                 Prueba el portal de simulación interactivo.
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Evaluamos conceptualmente los diagramas de flujo de datos y la viabilidad técnica para la creación del modelo digital de tu planta impulsora.
+                Evaluamos conceptualmente los diagramas de flujo de datos y la viabilidad técnica para la creación del modelo digital de tu planta propulsora.
               </p>
 
               <div className="space-y-3.5 text-xs text-slate-300 font-mono">
@@ -248,14 +248,14 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-xs text-slate-500 font-mono">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-[10px] sm:text-xs text-slate-500 font-mono text-center md:text-left">
             <div>
               &copy; {new Date().getFullYear()} Simarp Limitada. Todos los derechos reservados.
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center">
               <span>IP67 Certified Hardware</span>
-              <span>•</span>
-              <span>Contacto Comercial: ventas@simarp.net</span>
+              <span className="hidden sm:inline">•</span>
+              <span>ventas@simarp.net</span>
             </div>
           </div>
         </div>

@@ -149,20 +149,20 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
               </p>
             </div>
 
-            <div className="pt-4 border-t border-slate-900 flex justify-between items-center text-center">
-              <div>
-                <span className="block text-2xl font-mono font-extrabold text-white">+50</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">PGNs Monitoreados</span>
+            <div className="pt-4 border-t border-slate-900 flex flex-wrap justify-between items-center text-center gap-y-4">
+              <div className="min-w-[70px]">
+                <span className="block text-xl sm:text-2xl font-mono font-extrabold text-white">+50</span>
+                <span className="text-[8px] sm:text-[9px] uppercase font-mono tracking-widest text-slate-500 block">PGNs Monitoreados</span>
               </div>
-              <div className="border-r border-slate-900 h-8" />
-              <div>
-                <span className="block text-2xl font-mono font-extrabold text-cyan-400">J1939</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Protocolo CAN-Bus</span>
+              <div className="border-r border-slate-900 h-8 hidden sm:block" />
+              <div className="min-w-[70px]">
+                <span className="block text-xl sm:text-2xl font-mono font-extrabold text-cyan-400">J1939</span>
+                <span className="text-[8px] sm:text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Protocolo CAN-Bus</span>
               </div>
-              <div className="border-r border-slate-900 h-8" />
-              <div>
-                <span className="block text-2xl font-mono font-extrabold text-white">Tiempo Real</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Telemetría Continua</span>
+              <div className="border-r border-slate-900 h-8 hidden sm:block" />
+              <div className="min-w-[70px]">
+                <span className="block text-lg sm:text-2xl font-mono font-extrabold text-white">Tiempo Real</span>
+                <span className="text-[8px] sm:text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Telemetría</span>
               </div>
             </div>
           </div>

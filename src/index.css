@@ -24,4 +24,38 @@
   box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
 }
 
+/* Mobile: prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
 
+/* Prevent content from breaking viewport */
+*, *::before, *::after {
+  max-width: 100%;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better touch targets on iOS */
+@media (max-width: 640px) {
+  input[type="range"] {
+    height: 8px;
+    -webkit-appearance: none;
+  }
+
+  button, a {
+    min-height: 44px;
+  }
+
+  select {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+
+  input, textarea {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
