@@ -111,8 +111,8 @@ export default function App() {
               <div className="relative rounded-sm overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/40 p-4">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-slate-950/20" />
                 <img 
-                  src="/cargo_ship_at_sea.png" 
-                  alt="Buque mercante navegando" 
+                  src="/harbor_tugboat.png" 
+                  alt="Remolcador de puerto operando" 
                   className="w-full h-64 object-cover rounded-sm grayscale brightness-90 relative z-10"
                 />
                 
