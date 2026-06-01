@@ -145,7 +145,7 @@ export default function ProblemAndSolution() {
                 </h3>
                 
                 <p className="text-slate-400 text-xs mt-3 leading-relaxed font-sans">
-                  Extracción continua a través del bus CAN del buque. Monitoreamos en tiempo real las variables físicas fundamentales simuladas: RPM de la hélice, el ángulo del propulsor azimutal ASD, temperaturas de escape, presiones y los gradientes térmicos en las camisas de cilindros de fuerza.
+                  Emulamos la telemetría CAN-Bus en este portal para demostraciones interactivas, pero nuestro dispositivo físico está diseñado para conectarse directamente al bus CAN de la sala de máquinas, leyendo pasivamente variables reales (RPM, ángulo del propulsor azimutal ASD, presiones y temperaturas).
                 </p>
               </div>
 

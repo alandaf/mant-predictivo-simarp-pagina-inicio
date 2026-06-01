@@ -131,8 +131,8 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
               <div className="flex gap-2.5 items-start font-sans">
                 <Cpu className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-100">Modelado de Adquisición Edge</p>
-                  <p className="text-slate-400">Emulamos la adquisición de datos J1939 del bus CAN bajo condiciones extremas y de fatiga del motor.</p>
+                  <p className="font-bold text-slate-100">Hardware Listo para Altamar</p>
+                  <p className="text-slate-400">Emulamos la adquisición J1939 para demostraciones, pero nuestro dispositivo físico está listo para conectarse al bus CAN del motor y recibir datos reales a bordo.</p>
                 </div>
               </div>
             </div>
