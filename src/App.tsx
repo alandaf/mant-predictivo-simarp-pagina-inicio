@@ -70,7 +70,7 @@ export default function App() {
                   onClick={openDemoModal}
                   className="bg-cyan-600 hover:bg-cyan-505 hover:bg-cyan-500 text-slate-950 px-8 py-4 rounded-sm font-bold tracking-widest text-xs uppercase hover:shadow-lg hover:shadow-cyan-950/20 active:scale-98 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Solicitar una Demo Gratuita</span>
+                  <span>Solicitar Reunión</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
                 
@@ -255,7 +255,7 @@ export default function App() {
             <div className="flex gap-4">
               <span>IP67 Certified Hardware</span>
               <span>•</span>
-              <span>Soporte Comercial: info@simarp.cl</span>
+              <span>Contacto Comercial: ventas@simarp.net</span>
             </div>
           </div>
         </div>

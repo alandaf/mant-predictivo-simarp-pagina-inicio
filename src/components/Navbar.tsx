@@ -113,7 +113,7 @@ export default function Navbar({ onContactClick }: NavbarProps) {
               onClick={onContactClick}
               className="bg-cyan-600 hover:bg-cyan-500 text-slate-950 px-5 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150"
             >
-              Solicitar Demo Gratuita
+              Contáctenos
             </button>
           </div>
 
@@ -178,7 +178,7 @@ export default function Navbar({ onContactClick }: NavbarProps) {
                 }}
                 className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4 py-3 rounded-lg text-center font-bold shadow-md shadow-emerald-950/20 block cursor-pointer transition-colors duration-150"
               >
-                Solicitar una Demo Gratuita
+                Contáctenos
               </button>
             </div>
           </motion.div>

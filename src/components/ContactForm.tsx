@@ -33,10 +33,40 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
     setErrorMessage('');
     setStatus('submitting');
     
-    // Simulate marine integration API submission
-    setTimeout(() => {
-      setStatus('success');
-    }, 1800);
+    fetch('https://formspree.io/ventas@simarp.net', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        Nombre: formData.nombre,
+        Email: formData.email,
+        Cargo: formData.cargo,
+        Compania: formData.compania,
+        FlotaSize: formData.flotaSize,
+        MotorBrand: formData.motorBrand,
+        Mensaje: formData.mensaje
+      })
+    })
+    .then((response) => {
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        response.json().then((data) => {
+          if (data && data.errors) {
+            setErrorMessage(data.errors.map((error: any) => error.message).join(', '));
+          } else {
+            setErrorMessage('Hubo un problema al enviar el formulario.');
+          }
+          setStatus('idle');
+        });
+      }
+    })
+    .catch(() => {
+      setErrorMessage('Error de conexión al enviar el formulario.');
+      setStatus('idle');
+    });
   };
 
   const formContent = (
@@ -101,7 +131,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 Conexión Inmediata
               </span>
               <h3 className="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">
-                Agenda tu Demo Técnica Sin Costo
+                Agenda una Reunión Técnica
               </h3>
               <p className="text-xs text-slate-400 mt-2">
                 Conectamos un nodo de prueba en tu buque bandera por 30 días para demostrar valor antes de integrar toda la flota.
@@ -233,7 +263,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 </>
               ) : (
                 <>
-                  <span>Enviar Requerimiento y Agendar Demo</span>
+                  <span>Enviar Requerimiento y Agendar Reunión</span>
                   <ChevronRight className="w-4 h-4" />
                 </>
               )}
@@ -278,7 +308,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
               </span>
             </div>
             <h3 className="font-display text-xl font-bold text-white tracking-tight">
-              Solicitud de Demo Gratuita
+              Solicitud de Reunión Técnica
             </h3>
             <p className="text-[11px] text-slate-400 mt-0.5">
               Recibe un informe de factibilidad y agenda la llamada con nuestros ingenieros.
