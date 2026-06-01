@@ -1,0 +1,284 @@
+import React, { useState } from 'react';
+import { 
+  Ship, Cpu, ShieldCheck, ChevronRight, Waves, Send, Anchor, Compass, PhoneCall, HelpCircle, ArrowRight
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import Navbar from './components/Navbar';
+import TelemetrySimulator from './components/TelemetrySimulator';
+import NavigationHub from './components/NavigationHub';
+import ProblemAndSolution from './components/ProblemAndSolution';
+import RoiCalculator from './components/RoiCalculator';
+import Benefits from './components/Benefits';
+import ContactForm from './components/ContactForm';
+
+export default function App() {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+  const [isSimulatorOpen, setIsSimulatorOpen] = useState(false);
+
+  const openDemoModal = () => setIsDemoModalOpen(true);
+  const closeDemoModal = () => setIsDemoModalOpen(false);
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden relative">
+      {/* Wave decor backgrounds */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-gradient-to-b from-cyan-950/10 via-slate-950/5 to-transparent blur-3xl pointer-events-none" />
+
+      {/* Navigation */}
+      <Navbar onContactClick={openDemoModal} />
+
+      {/* HERO SECTION */}
+      <header className="relative pt-28 pb-12 lg:pt-36 lg:pb-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Hero Content (Col 7) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-7 space-y-6 text-left"
+            >
+              {/* Product Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/30 border border-cyan-800/30 rounded-sm text-cyan-400 text-xs font-mono font-bold uppercase tracking-[0.15em]">
+                <Cpu className="w-3.5 h-3.5 text-cyan-400 animate-pulse" /> IA Generativa & Predictiva Marítima
+              </div>
+
+              {/* H1 Main Title */}
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+                Anticípate a la Falla.{' '}
+                <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent underline decoration-cyan-500/20 underline-offset-4">
+                  Mantenimiento Predictivo
+                </span>{' '}
+                con IA para Flotas Marítimas.
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-slate-350 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
+                Monitoreo en tiempo real de motores diésel marinos <strong className="text-slate-100 font-semibold">Caterpillar, Wärtsilä, MaK</strong>. Detectamos desgaste y anomalías térmicas antes de que ocurra una avería en altamar.
+              </p>
+
+              {/* Actions CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <button
+                  onClick={openDemoModal}
+                  className="bg-cyan-600 hover:bg-cyan-505 hover:bg-cyan-500 text-slate-950 px-8 py-4 rounded-sm font-bold tracking-widest text-xs uppercase hover:shadow-lg hover:shadow-cyan-950/20 active:scale-98 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <span>Solicitar una Demo Gratuita</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                
+                <a
+                  href="#problema"
+                  className="bg-slate-900/60 hover:bg-slate-850/80 text-white border border-slate-800 px-6 py-4 rounded-sm font-semibold tracking-wide text-center flex items-center justify-center gap-2 cursor-pointer transition-all duration-150 text-sm"
+                >
+                  <span>Ver Especificaciones Técnicas</span>
+                  <ArrowRight className="w-4 h-4 text-slate-500" />
+                </a>
+              </div>
+
+              {/* Enterprise logos / Trust factors */}
+              <div className="pt-6 border-t border-slate-900/60 space-y-2.5">
+                <span className="text-[10px] text-slate-500 font-mono uppercase tracking-widest block font-medium">
+                  SOPORTE Y COMPATIBILIDAD INDUSTRIAL DIRECTA:
+                </span>
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 font-display text-[15px] font-bold text-slate-400">
+                  <span className="hover:text-slate-200 transition-colors">CATERPILLAR® 3500</span>
+                  <span className="text-slate-800">•</span>
+                  <span className="hover:text-slate-200 transition-colors">WÄRTSILÄ® 20/32</span>
+                  <span className="text-slate-800">•</span>
+                  <span className="hover:text-slate-200 transition-colors">MaK® M32C</span>
+                  <span className="text-slate-800">•</span>
+                  <span className="hover:text-slate-200 transition-colors">SAE J1939 CAN BUS</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Hero Interactive Block (Col 5) */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-5 relative"
+            >
+              {/* Shield Badge Decor */}
+              <div className="absolute -top-4 -left-4 bg-slate-900 border border-slate-800 p-3 rounded-sm shadow-lg z-20 flex items-center gap-1.5 hidden sm:flex">
+                <ShieldCheck className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <span className="block text-[10px] font-mono text-slate-400 uppercase leading-none">Protección Completa</span>
+                  <span className="block text-[11px] text-white font-bold leading-tight font-display mt-0.5">Certificación Marina IP67</span>
+                </div>
+              </div>
+
+              {/* Graphic illustration representative of cargo ship and data node */}
+              <div className="relative rounded-sm overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/40 p-4">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-slate-950/20" />
+                <img 
+                  src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop" 
+                  alt="Buque mercante navegando" 
+                  className="w-full h-64 object-cover rounded-sm grayscale brightness-90 relative z-10"
+                  referrerPolicy="no-referrer"
+                />
+                
+                <div className="pt-4 relative z-10">
+                  <p className="font-mono text-[10px] text-cyan-400 uppercase tracking-[0.12em] font-bold flex items-center gap-1">
+                    <Waves className="w-3.5 h-3.5 text-cyan-450 animate-pulse" /> Telemarina Activa en Altamar
+                  </p>
+                  <p className="text-white font-display text-sm font-semibold mt-1">
+                    Nodo Simarp-Edge sincronizando diagnóstico vía Satélite.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </header>
+
+      {/* CORE SIMULATOR SECTION */}
+      <section className="bg-slate-950 pb-16 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NavigationHub onOpenSimulator={() => setIsSimulatorOpen(true)} />
+        </div>
+      </section>
+
+      {/* PROBLEM & SOLUTION */}
+      <section className="bg-slate-950 py-16 border-t border-slate-900/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ProblemAndSolution />
+        </div>
+      </section>
+
+      {/* ROI CALCULATOR SECTION */}
+      <section id="calculadora" className="bg-slate-950 py-16 border-t border-slate-900/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RoiCalculator onContactClick={openDemoModal} />
+        </div>
+      </section>
+
+      {/* BENEFITS & CRITICAL SUPPORT SECTION */}
+      <section className="bg-slate-950 py-16 border-t border-slate-900/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Benefits onContactClick={openDemoModal} />
+        </div>
+      </section>
+
+      {/* BOTTOM CONTACT SECTION */}
+      <section id="contacto" className="bg-gradient-to-b from-slate-950 to-slate-900 py-16 border-t border-slate-900/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left text column (Col 5) */}
+            <div className="lg:col-span-5 space-y-6">
+              <span className="text-cyan-400 font-mono text-xs uppercase tracking-[0.2em] block font-bold">
+                ESTUDIO DE FACTIBILIDAD RADAR
+              </span>
+              <h2 className="font-display text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                Instala un equipo de prueba en tu sala de máquinas hoy mismo.
+              </h2>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Evaluamos gratis los planos de tu planta impulsora y la viabilidad física de conexión para darte un informe de retorno de inversión garantizado en el buque seleccionado.
+              </p>
+
+              <div className="space-y-3.5 text-xs text-slate-300 font-mono">
+                <div className="flex gap-2 items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                  <span>Cero costo de desinstalación o penalidades</span>
+                </div>
+                <div className="flex gap-2 items-center text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                  <span>Compatibilidad garantizada con Caterpillar, Wärtsilä y MaK</span>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                  <span>Soporte de campo en puertos principales de Sudamérica</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Form Column (Col 7) */}
+            <div className="lg:col-span-7 bg-slate-950 rounded-sm p-6 lg:p-8 border border-slate-800 shadow-xl">
+              <ContactForm />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-900/70">
+            
+            {/* Logo */}
+            <div className="flex items-center space-x-2">
+              <div className="bg-slate-900 border border-slate-800 p-2 rounded-sm text-white">
+                <Ship className="w-5 h-5 text-cyan-400" />
+              </div>
+              <div>
+                <span className="font-display text-lg font-bold tracking-tight text-white block">
+                  SIMARP LIMITADA
+                </span>
+                <span className="block text-[9px] uppercase tracking-[0.12em] text-slate-500 font-mono -mt-1 font-bold">
+                  Mantenimiento Predictivo Inteligente
+                </span>
+              </div>
+            </div>
+
+            {/* Quick links */}
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs font-sans">
+              <a href="#problema" className="hover:text-white transition-colors">El Problema</a>
+              <a href="#solucion" className="hover:text-white transition-colors">La Solución</a>
+              <a href="#calculadora" className="hover:text-white transition-colors">Calculadora ROI</a>
+              <a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a>
+              <a href="#valores" className="hover:text-white transition-colors">Ingeniería Naval</a>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-xs text-slate-500 font-mono">
+            <div>
+              &copy; {new Date().getFullYear()} Simarp Limitada. Todos los derechos reservados.
+            </div>
+            <div className="flex gap-4">
+              <span>IP67 Certified Hardware</span>
+              <span>•</span>
+              <span>Soporte Comercial: info@simarp.cl</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* OVERLAY DEMO MODAL */}
+      <AnimatePresence>
+        {isDemoModalOpen && (
+          <ContactForm isModal onClose={closeDemoModal} />
+        )}
+      </AnimatePresence>
+
+      {/* OVERLAY SIMULATOR MODAL */}
+      <AnimatePresence>
+        {isSimulatorOpen && (
+          <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm overflow-y-auto p-4 sm:p-6 md:p-10 flex items-center justify-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ duration: 0.3 }}
+              className="w-full max-w-7xl bg-slate-900 border border-slate-800 rounded-sm shadow-2xl relative p-1 max-h-[95vh] overflow-y-auto"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsSimulatorOpen(false)}
+                className="absolute top-4 right-4 bg-slate-950 hover:bg-slate-800 border border-slate-850 hover:border-slate-800 text-slate-400 hover:text-white px-3 py-1.5 rounded-sm cursor-pointer z-50 font-mono text-[10px] font-bold uppercase transition-colors"
+              >
+                ✕ Cerrar Consola
+              </button>
+              <div className="p-4 sm:p-6 mt-4">
+                <TelemetrySimulator />
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Simarp - Mantenimiento Predictivo Marítimo",
+  "description": "Landing page de Simarp Limitada para el monitoreo y mantenimiento predictivo con IA de motores diésel para flotas marítimas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
