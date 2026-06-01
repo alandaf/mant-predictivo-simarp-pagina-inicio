@@ -33,7 +33,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
     setErrorMessage('');
     setStatus('submitting');
     
-    fetch('https://formspree.io/ventas@simarp.net', {
+    fetch('/send-contact.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -50,18 +50,14 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
       })
     })
     .then((response) => {
-      if (response.ok) {
-        setStatus('success');
-      } else {
-        response.json().then((data) => {
-          if (data && data.errors) {
-            setErrorMessage(data.errors.map((error: any) => error.message).join(', '));
-          } else {
-            setErrorMessage('Hubo un problema al enviar el formulario.');
-          }
+      return response.json().then((data) => {
+        if (response.ok && data.ok) {
+          setStatus('success');
+        } else {
+          setErrorMessage(data.error || 'Hubo un problema al enviar el formulario.');
           setStatus('idle');
-        });
-      }
+        }
+      });
     })
     .catch(() => {
       setErrorMessage('Error de conexión al enviar el formulario.');

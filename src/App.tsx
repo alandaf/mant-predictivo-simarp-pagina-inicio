@@ -61,7 +61,7 @@ export default function App() {
 
               {/* Subtitle */}
               <p className="text-slate-350 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
-                Portal de demostración y modelado predictivo para salas de máquinas. Simulamos la telemetría J1939 de motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para analizar anomalías operativas y proyectar fallas de forma proactiva.
+                Portal de demostración y modelado predictivo para salas de máquinas. Simulamos la telemetría J1939 de motores <strong className="text-slate-100 font-semibold">principales y auxiliares</strong> para analizar anomalías operativas y proyectar fallas de forma proactiva. Actualmente operamos sobre un simulador, pero el sistema está diseñado y construido para conectarse a motores reales en operación.
               </p>
 
               {/* Actions CTAs */}

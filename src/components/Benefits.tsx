@@ -142,27 +142,27 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
           <div className="lg:col-span-5 bg-slate-950/70 p-6 rounded-sm border border-slate-850 flex flex-col justify-between h-full space-y-6">
             <div className="space-y-4">
               <span className="text-[10px] font-mono uppercase text-cyan-400 font-bold tracking-widest bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
-                Caso de Estudio Simulado
+                Demostrador Tecnológico
               </span>
               <p className="text-xs text-slate-300 leading-relaxed font-sans mt-2">
-                En nuestro entorno de simulación, recreamos una anomalía térmica de inyector en el cilindro #8. Mientras el panel tradicional marca parámetros estables, el algoritmo predictivo detecta la anomalía de flujo y caída de RUL con 4 días de anticipación antes de la detención crítica del motor.
+                Portal de demostración y modelado predictivo para salas de máquinas. Simulamos la telemetría J1939 de motores principales y auxiliares para analizar anomalías operativas y proyectar fallas de forma proactiva. Actualmente operamos sobre un simulador, pero el sistema está diseñado y construido para conectarse a motores reales en operación.
               </p>
             </div>
 
             <div className="pt-4 border-t border-slate-900 flex justify-between items-center text-center">
               <div>
-                <span className="block text-2xl font-mono font-extrabold text-white">92.5%</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Precisión Modelo</span>
+                <span className="block text-2xl font-mono font-extrabold text-white">+50</span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">PGNs Monitoreados</span>
               </div>
               <div className="border-r border-slate-900 h-8" />
               <div>
                 <span className="block text-2xl font-mono font-extrabold text-cyan-400">J1939</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Estándar Emulación</span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Protocolo CAN-Bus</span>
               </div>
               <div className="border-r border-slate-900 h-8" />
               <div>
-                <span className="block text-2xl font-mono font-extrabold text-white">100%</span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Datos Locales</span>
+                <span className="block text-2xl font-mono font-extrabold text-white">Tiempo Real</span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 block">Telemetría Continua</span>
               </div>
             </div>
           </div>
