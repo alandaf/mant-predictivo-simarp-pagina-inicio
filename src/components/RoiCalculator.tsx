@@ -202,7 +202,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
     doc.line(15, 268, 195, 268);
     doc.setFontSize(7.5);
     doc.setTextColor(150, 150, 150);
-    doc.text('SIMARP - Plataforma Inteligente de Monitoreo Predictivo Naval', 15, 274);
+    doc.text('SIMARP - Plataforma Inteligente de Monitoreo Predictivo Marítimo', 15, 274);
     doc.text('Este reporte constituye una simulación económica estimada basada en supuestos estándares y no compromete precios finales de cotización.', 15, 278);
 
     doc.save(`Caso_de_Negocio_SIMARP_${fleetSize}_buques.pdf`);
