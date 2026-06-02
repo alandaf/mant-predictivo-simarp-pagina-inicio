@@ -98,19 +98,35 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(70, 70, 70);
 
-    const drawRow = (label: string, value: string, y: number) => {
+    const drawRow = (label: string, sublabel: string, value: string, y: number) => {
       doc.setFont('helvetica', 'bold');
+      doc.setFontSize(9.5);
+      doc.setTextColor(11, 19, 41);
       doc.text(label, 15, y);
+      
+      if (sublabel) {
+        doc.setFont('helvetica', 'italic');
+        doc.setFontSize(8);
+        doc.setTextColor(100, 100, 100);
+        doc.text(sublabel, 15, y + 4.5);
+      }
+      
       doc.setFont('helvetica', 'normal');
-      doc.text(value, 130, y);
+      doc.setFontSize(9.5);
+      doc.setTextColor(70, 70, 70);
+      
+      const valueYOffset = sublabel ? 2.5 : 0;
+      doc.text(value, 165, y + valueYOffset);
+      
       doc.setDrawColor(230, 230, 230);
-      doc.line(15, y + 2.5, 195, y + 2.5);
+      const lineYOffset = sublabel ? 7 : 2.5;
+      doc.line(15, y + lineYOffset, 195, y + lineYOffset);
     };
 
-    drawRow('Tamaño de Flota Evaluada:', `${fleetSize} ${fleetSize === 1 ? 'Buque' : 'Buques'}`, 66);
-    drawRow('Gasto de Mantenimiento Anual por Buque:', formatUSD(annualMaintPerBuque), 74);
-    drawRow('Costo Estimado de una Falla Crítica:', formatUSD(unplannedFailureCost), 82);
-    drawRow('Costo de Suscripción Anual SIMARP Simulado:', formatUSD(simarpCost), 90);
+    drawRow('Tamaño de Flota Evaluada:', '', `${fleetSize} ${fleetSize === 1 ? 'Buque' : 'Buques'}`, 66);
+    drawRow('Gasto de Mantenimiento Anual por Buque:', '', formatUSD(annualMaintPerBuque), 74);
+    drawRow('Costo Estimado de una Falla Crítica:', '', formatUSD(unplannedFailureCost), 82);
+    drawRow('Costo de Suscripción Anual SIMARP Simulado:', '', formatUSD(simarpCost), 90);
 
     // Section 2: Detailed Savings
     doc.setFont('helvetica', 'bold');
@@ -118,48 +134,51 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
     doc.setTextColor(11, 19, 41);
     doc.text('2. Desglose Detallado de Ahorros Anuales Proyectados', 15, 106);
 
-    drawRow(`Prevención de Fallas Críticas (${preventedFailures} fallas evitadas al año × ${formatUSD(unplannedFailureCost)}):`, formatUSD(failureSavings), 114);
-    drawRow('Optimización de Repuestos (22% de reducción estimada en reemplazo prematuro):', formatUSD(maintSavings), 122);
-    drawRow('Eficiencia Térmica e Inyección (1.8% de ahorro en consumo diésel):', formatUSD(fuelSavings), 130);
+    drawRow('Prevención de Fallas Críticas', `(${preventedFailures} fallas evitadas al año × ${formatUSD(unplannedFailureCost)})`, formatUSD(failureSavings), 114);
+    drawRow('Optimización de Repuestos', '(22% de reducción estimada en reemplazo prematuro)', formatUSD(maintSavings), 124);
+    drawRow('Eficiencia Térmica e Inyección', '(1.8% de ahorro en consumo diésel)', formatUSD(fuelSavings), 134);
     
     // Highlight Ahorro Total
     doc.setFillColor(240, 248, 255);
-    doc.rect(15, 136, 180, 10, 'F');
+    doc.rect(15, 146, 180, 10, 'F');
     doc.setFont('helvetica', 'bold');
+    doc.setFontSize(10);
     doc.setTextColor(11, 19, 41);
-    doc.text('AHORRO ANUAL BRUTO PROYECTADO:', 20, 142.5);
-    doc.text(formatUSD(totalAnnualSavings), 130, 142.5);
+    doc.text('AHORRO ANUAL BRUTO PROYECTADO:', 20, 152.5);
+    doc.text(formatUSD(totalAnnualSavings), 165, 152.5);
 
     // Section 3: ROI Analytics
+    doc.setFont('helvetica', 'bold');
     doc.setFontSize(13);
-    doc.text('3. Análisis de Retorno de la Inversión (ROI)', 15, 160);
+    doc.text('3. Análisis de Retorno de la Inversión (ROI)', 15, 168);
 
-    drawRow('Ahorro Anual Proyectado:', formatUSD(totalAnnualSavings), 168);
-    drawRow('Costo de Suscripción Anual SIMARP:', formatUSD(simarpCost), 176);
-    drawRow('Ahorro Neto Proyectado (Primer Año):', formatUSD(netSavings), 184);
+    drawRow('Ahorro Anual Proyectado:', '', formatUSD(totalAnnualSavings), 176);
+    drawRow('Costo de Suscripción Anual SIMARP:', '', formatUSD(simarpCost), 184);
+    drawRow('Ahorro Neto Proyectado (Primer Año):', '', formatUSD(netSavings), 192);
     
     // ROI and Payback highlights
     doc.setFillColor(235, 253, 250);
-    doc.rect(15, 190, 85, 15, 'F');
+    doc.rect(15, 202, 85, 15, 'F');
     doc.setTextColor(10, 100, 90);
     doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
-    doc.text('RETORNO DE LA INVERSIÓN (ROI)', 20, 195);
+    doc.text('RETORNO DE LA INVERSIÓN (ROI)', 20, 207);
     doc.setFontSize(13);
-    doc.text(`${roiValue.toFixed(1)} %`, 20, 202);
+    doc.text(`${roiValue.toFixed(1)} %`, 20, 214);
 
     doc.setFillColor(254, 243, 235);
-    doc.rect(110, 190, 85, 15, 'F');
+    doc.rect(110, 202, 85, 15, 'F');
     doc.setTextColor(130, 50, 10);
     doc.setFontSize(9);
-    doc.text('TIEMPO DE RECUPERACIÓN (PAYBACK)', 115, 195);
+    doc.text('TIEMPO DE RECUPERACIÓN (PAYBACK)', 115, 207);
     doc.setFontSize(13);
-    doc.text(`${paybackMonths.toFixed(1)} Meses`, 115, 202);
+    doc.text(`${paybackMonths.toFixed(1)} Meses`, 115, 214);
 
     // Section 4: Methodology and Sources
     doc.setTextColor(11, 19, 41);
     doc.setFontSize(11);
-    doc.text('4. Fuentes del Modelo Financiero y Metodología', 15, 220);
+    doc.setFont('helvetica', 'bold');
+    doc.text('4. Fuentes del Modelo Financiero y Metodología', 15, 228);
     
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(8.5);
@@ -172,7 +191,7 @@ export default function RoiCalculator({ onContactClick }: RoiCalculatorProps) {
       '• Repuestos: Reducción estimada de 22% al realizar overhauls basados en condición en lugar de horas de funcionamiento fijas.'
     ];
 
-    let currentY = 227;
+    let currentY = 235;
     lines.forEach(line => {
       doc.text(line, 15, currentY);
       currentY += 5.5;
