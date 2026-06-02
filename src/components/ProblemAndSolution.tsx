@@ -133,8 +133,8 @@ export default function ProblemAndSolution() {
           <div className="relative py-4">
             {/* Connecting pipe background (desktop only) */}
             <div className="hidden lg:block absolute top-1/2 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-cyan-500/40 via-slate-600/40 to-emerald-500/40 -translate-y-1/2 z-0" />
-            <div className="hidden lg:block absolute top-1/2 left-[33%] w-3 h-3 bg-cyan-400 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse z-10" />
-            <div className="hidden lg:block absolute top-1/2 left-[66%] w-3 h-3 bg-emerald-400 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse z-10" />
+            <div className="hidden lg:block absolute top-1/2 left-[33.3%] w-3 h-3 bg-cyan-400 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse z-30" />
+            <div className="hidden lg:block absolute top-1/2 left-[66.6%] w-3 h-3 bg-emerald-400 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse z-30" />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative z-20">
               {/* Node 1: Edge */}
