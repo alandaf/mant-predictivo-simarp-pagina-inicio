@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="theme-color" content="#020617" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.json" />
     
     <link rel="icon" href="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt-72x74.png" sizes="32x32" />
     <link rel="icon" href="https://simarp.net/wp-content/uploads/2024/02/logo_unificado_grises_opt.png" sizes="192x192" />
@@ -49,6 +51,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </body>
 </html>
 

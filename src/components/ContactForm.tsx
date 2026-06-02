@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Send, CheckCircle, Ship, Lock, Mail, Building, User, FileText, ChevronRight, X
 } from 'lucide-react';
@@ -10,6 +10,15 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ isModal = false, onClose }: ContactFormProps) {
+  useEffect(() => {
+    if (!isModal || !onClose) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [isModal, onClose]);
+
   const [formData, setFormData] = useState<ContactFormData>({
     nombre: '',
     email: '',
@@ -277,7 +286,12 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
 
   if (isModal) {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
         {/* Backdrop overlay */}
         <div 
           onClick={onClose}
@@ -305,7 +319,7 @@ export default function ContactForm({ isModal = false, onClose }: ContactFormPro
                 Naviera Simarp
               </span>
             </div>
-            <h3 className="font-display text-xl font-bold text-white tracking-tight">
+            <h3 id="modal-title" className="font-display text-xl font-bold text-white tracking-tight">
               Solicitud de Reunión Técnica
             </h3>
             <p className="text-[11px] text-slate-400 mt-0.5">

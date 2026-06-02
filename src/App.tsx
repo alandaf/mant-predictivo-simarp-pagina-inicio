@@ -6,8 +6,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar';
 import NavigationHub from './components/NavigationHub';
 import ProblemAndSolution from './components/ProblemAndSolution';
+import ErrorBoundary from './components/ErrorBoundary';
 import RoiCalculator from './components/RoiCalculator';
 import Benefits from './components/Benefits';
+import WhySimarp from './components/WhySimarp';
 import ContactForm from './components/ContactForm';
 
 export default function App() {
@@ -18,6 +20,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden relative">
+      {/* Skip to content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-cyan-600 focus:text-slate-950 focus:px-4 focus:py-2 focus:rounded-sm focus:text-xs focus:font-bold focus:uppercase focus:tracking-widest"
+      >
+        Saltar al contenido principal
+      </a>
+
       {/* Technical Grid Overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.25] pointer-events-none z-0" />
       
@@ -32,7 +42,7 @@ export default function App() {
       <Navbar onContactClick={openDemoModal} />
 
       {/* HERO SECTION */}
-      <header className="relative pt-28 pb-12 lg:pt-36 lg:pb-20 overflow-hidden">
+      <header id="main-content" className="relative pt-28 pb-12 lg:pt-36 lg:pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -147,30 +157,43 @@ export default function App() {
       {/* CORE SIMULATOR SECTION */}
       <section className="bg-slate-950 pb-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NavigationHub />
+          <ErrorBoundary>
+            <NavigationHub />
+          </ErrorBoundary>
         </div>
       </section>
 
       {/* PROBLEM & SOLUTION */}
       <section className="bg-slate-950 py-16 border-t border-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ProblemAndSolution />
+          <ErrorBoundary>
+            <ProblemAndSolution />
+          </ErrorBoundary>
         </div>
       </section>
 
       {/* ROI CALCULATOR SECTION */}
       <section id="calculadora" className="bg-slate-950 py-16 border-t border-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <RoiCalculator onContactClick={openDemoModal} />
+          <ErrorBoundary>
+            <RoiCalculator onContactClick={openDemoModal} />
+          </ErrorBoundary>
         </div>
       </section>
 
       {/* BENEFITS & CRITICAL SUPPORT SECTION */}
       <section className="bg-slate-950 py-16 border-t border-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Benefits onContactClick={openDemoModal} />
+          <ErrorBoundary>
+            <Benefits onContactClick={openDemoModal} />
+          </ErrorBoundary>
         </div>
       </section>
+
+      {/* WHY SIMARP */}
+      <ErrorBoundary>
+        <WhySimarp />
+      </ErrorBoundary>
 
       {/* BOTTOM CONTACT SECTION */}
       <section id="contacto" className="bg-gradient-to-b from-slate-950 to-slate-900 py-16 border-t border-slate-900/60">
@@ -243,6 +266,7 @@ export default function App() {
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs font-sans">
               <a href="#problema" className="hover:text-white transition-colors">El Problema</a>
               <a href="#solucion" className="hover:text-white transition-colors">La Solución</a>
+              <a href="#por-que-simarp" className="hover:text-white transition-colors">¿Por qué Simarp?</a>
               <a href="#calculadora" className="hover:text-white transition-colors">Calculadora ROI</a>
               <a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a>
               <a href="#valores" className="hover:text-white transition-colors">Ingeniería Marítima</a>

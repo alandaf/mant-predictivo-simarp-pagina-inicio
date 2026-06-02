@@ -87,6 +87,12 @@ export default function Navbar({ onContactClick }: NavbarProps) {
               La Solución
             </button>
             <button
+              onClick={() => scrollToSection('por-que-simarp')}
+              className="text-slate-300 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
+            >
+              ¿Por qué Simarp?
+            </button>
+            <button
               onClick={() => scrollToSection('calculadora')}
               className="text-slate-300 hover:text-cyan-400 transition-colors duration-150 text-xs font-bold uppercase tracking-widest cursor-pointer"
             >
@@ -154,6 +160,12 @@ export default function Navbar({ onContactClick }: NavbarProps) {
               className="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-900"
             >
               La Solución
+            </button>
+            <button
+              onClick={() => scrollToSection('por-que-simarp')}
+              className="block w-full text-left px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-900"
+            >
+              ¿Por qué Simarp?
             </button>
             <button
               onClick={() => scrollToSection('calculadora')}
