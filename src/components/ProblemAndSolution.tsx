@@ -124,6 +124,115 @@ export default function ProblemAndSolution() {
             </p>
           </div>
 
+          {/* Architecture Diagram */}
+          <div className="relative py-4">
+            {/* Connecting pipe background (desktop only) */}
+            <div className="hidden lg:block absolute top-1/2 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-cyan-500/40 via-slate-600/40 to-emerald-500/40 -translate-y-1/2 z-0" />
+            <div className="hidden lg:block absolute top-1/2 left-[33%] w-3 h-3 bg-cyan-400 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse z-10" />
+            <div className="hidden lg:block absolute top-1/2 left-[66%] w-3 h-3 bg-emerald-400 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse z-10" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative z-20">
+              {/* Node 1: Edge */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="bg-slate-900/60 border border-cyan-800/30 rounded-sm p-4 md:p-5 backdrop-blur-sm group hover:border-cyan-500/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-cyan-950/50 p-2 rounded-sm text-cyan-400 border border-cyan-800/30">
+                    <Radio className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-widest block">EDGE — Nodo Simarp</span>
+                    <span className="text-[9px] text-slate-500 font-mono">Adquisición No Intrusiva</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-300 font-mono">
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />ECU del Motor (J1939)</span>
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-cyan-400/60" />CAN-Bus</span>
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-cyan-400/60" />Sensores Vibración *</span>
+                </div>
+                <div className="mt-2 pt-2 border-t border-slate-800/50 text-[10px] text-slate-500 font-mono">
+                  <span className="text-cyan-400 font-bold">+50 PGNs</span> monitoreados por nodo
+                </div>
+              </motion.div>
+
+              {/* Arrow (mobile) - hidden on md+ since we use the line */}
+              <div className="flex justify-center md:hidden">
+                <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+
+              {/* Node 2: IA Core */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="bg-slate-900/60 border border-orange-800/30 rounded-sm p-4 md:p-5 backdrop-blur-sm group hover:border-orange-500/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-orange-950/50 p-2 rounded-sm text-orange-400 border border-orange-800/30">
+                    <Cpu className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-orange-400 font-bold uppercase tracking-widest block">IA CORE — Streamlit</span>
+                    <span className="text-[9px] text-slate-500 font-mono">Modelos Predictivos</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-300 font-mono">
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-orange-400" />RUL (Vida Útil Restante)</span>
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-orange-400/60" />Anomalías Inyectores</span>
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-orange-400/60" />Degradación Lubricante</span>
+                </div>
+                <div className="mt-2 pt-2 border-t border-slate-800/50 text-[10px] text-slate-500 font-mono">
+                  <span className="text-orange-400 font-bold">90%</span> de fallas prevenidas
+                </div>
+              </motion.div>
+
+              {/* Arrow (mobile) */}
+              <div className="flex justify-center md:hidden">
+                <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+
+              {/* Node 3: Cloud */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="bg-slate-900/60 border border-emerald-800/30 rounded-sm p-4 md:p-5 backdrop-blur-sm group hover:border-emerald-500/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-emerald-950/50 p-2 rounded-sm text-emerald-400 border border-emerald-800/30">
+                    <Layers className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-emerald-400 font-bold uppercase tracking-widest block">CLOUD — Grafana</span>
+                    <span className="text-[9px] text-slate-500 font-mono">Monitoreo 24/7</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-300 font-mono">
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />Dashboards en Tiempo Real</span>
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />Alertas WhatsApp / Email</span>
+                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />Historial Auditoría</span>
+                </div>
+                <div className="mt-2 pt-2 border-t border-slate-800/50 text-[10px] text-slate-500 font-mono">
+                  <span className="text-emerald-400 font-bold">-22%</span> costo de mantenimiento anual
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Bottom legend */}
+            <div className="mt-4 text-center">
+              <span className="text-[9px] font-mono text-slate-600 tracking-widest uppercase">
+                * Sensores de vibración integrables según requerimiento del cliente
+              </span>
+            </div>
+          </div>
+
           {/* Pipeline Visual Flow (3 columns with directional indicators) */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
             
