@@ -111,7 +111,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:col-span-5 relative"
+              className="lg:col-span-5 relative max-w-md mx-auto lg:ml-auto lg:mr-0 w-full"
             >
               {/* Shield Badge Decor */}
               <div className="absolute -top-4 -left-4 bg-slate-900 border border-slate-800 p-3 rounded-sm shadow-lg z-20 flex items-center gap-1.5 hidden sm:flex">
@@ -134,9 +134,9 @@ export default function App() {
                   src="/harbor_tugboat.png" 
                   alt="Remolcador de puerto operando" 
                   width={500}
-                  height={256}
+                  height={224}
                   loading="lazy"
-                  className="w-full h-64 object-cover rounded-sm grayscale brightness-90 relative z-10 border border-slate-800"
+                  className="w-full h-56 object-cover rounded-sm grayscale brightness-90 relative z-10 border border-slate-800"
                 />
                 
                 <div className="pt-4 relative z-10">
