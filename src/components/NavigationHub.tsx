@@ -1,6 +1,5 @@
-import React from 'react';
 import { 
-  Layers, Brain, Compass, ArrowUpRight, Activity, Cpu, Gauge 
+  Layers, Brain, Compass, ArrowUpRight, Activity 
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -96,11 +95,7 @@ export default function NavigationHub() {
                 {/* Bottom CTA Button */}
                 <div className="mt-8 pt-4 border-t border-slate-950/60 flex items-center justify-between text-slate-300 font-mono text-[11px] group-hover:text-cyan-400 transition-colors duration-200 font-bold uppercase tracking-wider relative z-10">
                   <span>{platform.actionText}</span>
-                  {platform.isExternal ? (
                     <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                  ) : (
-                    <Gauge className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:animate-pulse transition-all" />
-                  )}
                 </div>
               </div>
             );
