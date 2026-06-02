@@ -89,15 +89,6 @@ export default function App() {
                   <span>Ver Especificaciones Técnicas</span>
                   <ArrowRight className="w-4 h-4 text-slate-500" />
                 </a>
-                <a
-                  href="https://wa.me/56976239238"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-4 rounded-sm font-bold tracking-widest text-xs uppercase transition-all duration-150 flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp</span>
-                </a>
               </div>
 
               {/* Enterprise logos / Trust factors */}
@@ -285,19 +276,28 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-[10px] sm:text-xs text-slate-500 font-mono text-center md:text-left">
             <div>
               &copy; {new Date().getFullYear()} Simarp Limitada. Todos los derechos reservados.
+              <span className="hidden sm:inline"> — </span>
+              <span className="block sm:inline text-slate-600">Desarrollado por Andrés Lands Figueroa</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center">
               <span>IP67 Certified Hardware</span>
               <span className="hidden sm:inline">•</span>
               <a href="mailto:ventas@simarp.net" className="hover:text-cyan-400 transition-colors">ventas@simarp.net</a>
-              <span className="hidden sm:inline">•</span>
-              <a href="https://wa.me/56976239238" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors flex items-center gap-1">
-                <MessageCircle className="w-3 h-3 inline" /> +56 9 7623 9238
-              </a>
             </div>
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/56976239238"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-5 right-5 z-50 bg-emerald-500 hover:bg-emerald-400 text-white p-3.5 rounded-full shadow-lg shadow-emerald-950/40 hover:shadow-emerald-500/20 transition-all duration-200 hover:scale-110"
+        aria-label="Contactar por WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7" />
+      </a>
 
       {/* OVERLAY DEMO MODAL */}
       <AnimatePresence>
