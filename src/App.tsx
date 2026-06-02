@@ -155,7 +155,7 @@ export default function App() {
       </header>
 
       {/* CORE SIMULATOR SECTION */}
-      <section className="bg-slate-950 pb-16 relative">
+      <section id="ecosistema" className="bg-slate-950 pb-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ErrorBoundary>
             <NavigationHub />

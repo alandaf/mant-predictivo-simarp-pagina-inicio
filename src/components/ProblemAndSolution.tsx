@@ -86,16 +86,21 @@ export default function ProblemAndSolution() {
               </motion.div>
 
               {/* Contrast Quote banner */}
-              <div className="bg-gradient-to-br from-cyan-950/20 to-slate-950 p-6 rounded-lg border border-cyan-500/10 flex flex-col justify-between">
-                <span className="text-[10px] text-cyan-400 font-mono tracking-widest uppercase block font-semibold">Nuestra Filosofía</span>
-                <p className="text-xs text-slate-300 font-semibold italic mt-3 leading-relaxed">
-                  "El objetivo no es alarmar cuando el motor se detiene, sino modelar la degradación para programar la reparación en puerto seguro."
-                </p>
-                <div className="flex items-center gap-1 text-[11px] text-cyan-400 font-mono font-bold mt-5">
-                  <span>Conoce el Ecosistema Simarp</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
+              <a 
+                href="#ecosistema"
+                className="bg-gradient-to-br from-cyan-950/20 to-slate-950 p-6 rounded-lg border border-cyan-500/10 flex flex-col justify-between group hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-950/10 transition-all duration-300 cursor-pointer text-left block"
+              >
+                <div>
+                  <span className="text-[10px] text-cyan-400 font-mono tracking-widest uppercase block font-semibold">Nuestra Filosofía</span>
+                  <p className="text-xs text-slate-300 font-semibold italic mt-3 leading-relaxed">
+                    "El objetivo no es alarmar cuando el motor se detiene, sino modelar la degradación para programar la reparación en puerto seguro."
+                  </p>
                 </div>
-              </div>
+                <div className="flex items-center gap-1 text-[11px] text-cyan-400 font-mono font-bold mt-5 group-hover:text-cyan-300 transition-colors">
+                  <span>Conoce el Ecosistema Simarp</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
 
             </div>
 
