@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  Ship, Cpu, ShieldCheck, ChevronRight, Waves, Send, Anchor, Compass, PhoneCall, HelpCircle, ArrowRight
+  Ship, Cpu, ShieldCheck, ChevronRight, Waves, Send, Anchor, Compass, PhoneCall, HelpCircle, ArrowRight, MessageCircle
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar';
@@ -88,6 +88,15 @@ export default function App() {
                 >
                   <span>Ver Especificaciones Técnicas</span>
                   <ArrowRight className="w-4 h-4 text-slate-500" />
+                </a>
+                <a
+                  href="https://wa.me/56976239238"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-4 rounded-sm font-bold tracking-widest text-xs uppercase transition-all duration-150 flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>WhatsApp</span>
                 </a>
               </div>
 
@@ -280,7 +289,11 @@ export default function App() {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center">
               <span>IP67 Certified Hardware</span>
               <span className="hidden sm:inline">•</span>
-              <span>ventas@simarp.net</span>
+              <a href="mailto:ventas@simarp.net" className="hover:text-cyan-400 transition-colors">ventas@simarp.net</a>
+              <span className="hidden sm:inline">•</span>
+              <a href="https://wa.me/56976239238" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+                <MessageCircle className="w-3 h-3 inline" /> +56 9 7623 9238
+              </a>
             </div>
           </div>
         </div>

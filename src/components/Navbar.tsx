@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Ship, Menu, X, Shield, PhoneCall } from 'lucide-react';
+import { Ship, Menu, X, Shield, PhoneCall, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface NavbarProps {
@@ -116,6 +116,15 @@ export default function Navbar({ onContactClick }: NavbarProps) {
 
           {/* CTA & Actions */}
           <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="https://wa.me/56976239238"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors duration-150 text-xs font-bold uppercase tracking-wider"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>+56 9 7623 9238</span>
+            </a>
             <button
               type="button"
               onClick={onContactClick}
@@ -185,7 +194,17 @@ export default function Navbar({ onContactClick }: NavbarProps) {
             >
               Soporte Marítimo
             </button>
-            <div className="pt-4 border-t border-slate-900">
+            <div className="pt-4 border-t border-slate-900 space-y-2">
+              <a
+                href="https://wa.me/56976239238"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2.5 rounded-md text-base font-medium text-emerald-400 hover:text-emerald-300 hover:bg-slate-900"
+                onClick={() => setIsOpen(false)}
+              >
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp +56 9 7623 9238
+              </a>
               <button
                 onClick={() => {
                   setIsOpen(false);
