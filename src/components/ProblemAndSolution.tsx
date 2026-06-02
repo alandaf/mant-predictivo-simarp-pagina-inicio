@@ -122,7 +122,7 @@ export default function ProblemAndSolution() {
               ARQUITECTURA INTEGRAL DE DIAGNÓSTICO
             </span>
             <h2 className="font-display text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
-              Ingeniería de Datos: Del Motor a los Monitores Online
+              Arquitectura de Datos: Desde el Motor hasta la Nube
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed max-w-2xl mx-auto font-sans">
               Capturamos de forma no intrusiva los datos de la ECU y sensores de vibración, procesándolos mediante modelos de IA para centralizar el monitoreo operativo de tu flota en la nube.
