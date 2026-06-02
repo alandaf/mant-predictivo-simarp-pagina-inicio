@@ -297,7 +297,7 @@ export default function ProblemAndSolution() {
               </div>
             </motion.div>
 
-            {/* Step 3: Monitores Online y Reportes (Grafana) */}
+            {/* Step 3: Monitoreo Online y Reportes (Grafana) */}
             <motion.div 
               whileHover={{ y: -6 }}
               className="bg-slate-900/40 border border-slate-800 p-6 lg:p-8 rounded-lg relative backdrop-blur-md flex flex-col justify-between h-full group hover:border-emerald-500/30 transition-all duration-300"
@@ -311,7 +311,7 @@ export default function ProblemAndSolution() {
                 </div>
                 
                 <h3 className="font-display text-lg font-bold text-white">
-                  Monitores Online en Grafana
+                  Monitoreo Online en Grafana
                 </h3>
                 
                 <p className="text-slate-400 text-xs mt-3 leading-relaxed font-sans">

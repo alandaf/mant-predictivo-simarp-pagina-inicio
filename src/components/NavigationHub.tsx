@@ -18,7 +18,7 @@ export default function NavigationHub() {
       actionText: 'Iniciar Simulador'
     },
     {
-      title: 'Monitores Online (Grafana)',
+      title: 'Monitoreo Online (Grafana)',
       subtitle: 'MÉTRICAS EN TIEMPO REAL',
       description: 'Visualización de telemetría CAN-Bus consolidada, históricos de presión/temperatura de cilindros de fuerza y dashboards interactivos optimizados para el monitoreo y auditoría de toda la flota.',
       icon: Layers,

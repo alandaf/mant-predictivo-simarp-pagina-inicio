@@ -18,7 +18,7 @@ export default function Benefits({ onContactClick }: BenefitsProps) {
       bg: 'bg-cyan-500/15'
     },
     {
-      title: 'Monitores Online y Dashboard Web 24/7',
+      title: 'Monitoreo Online y Dashboard Web 24/7',
       description: 'Acceso total en tiempo real desde cualquier dispositivo de escritorio o móvil a la telemetría de toda tu flota. Sigue las tendencias térmicas de cada cilindro e inspecciona informes históricos generados por IA.',
       accent: 'Vista Global de Flota',
       icon: LayoutGrid,
