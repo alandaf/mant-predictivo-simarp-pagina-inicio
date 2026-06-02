@@ -4,11 +4,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
-interface NavigationHubProps {
-  onOpenSimulator: () => void;
-}
-
-export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
+export default function NavigationHub() {
   const platforms = [
     {
       title: 'Simulador SmartProp ASD',
@@ -109,34 +105,19 @@ export default function NavigationHub({ onOpenSimulator }: NavigationHubProps) {
               </div>
             );
 
-            if (platform.isExternal) {
-              return (
-                <motion.a
-                  key={index}
-                  href={platform.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block cursor-pointer"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  {cardContent}
-                </motion.a>
-              );
-            }
-
             return (
-              <motion.button
+              <motion.a
                 key={index}
-                onClick={onOpenSimulator}
-                className="block text-left w-full cursor-pointer"
+                href={platform.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block cursor-pointer"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 {cardContent}
-              </motion.button>
+              </motion.a>
             );
           })}
         </div>

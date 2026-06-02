@@ -4,7 +4,6 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar';
-import TelemetrySimulator from './components/TelemetrySimulator';
 import NavigationHub from './components/NavigationHub';
 import ProblemAndSolution from './components/ProblemAndSolution';
 import RoiCalculator from './components/RoiCalculator';
@@ -13,7 +12,6 @@ import ContactForm from './components/ContactForm';
 
 export default function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
-  const [isSimulatorOpen, setIsSimulatorOpen] = useState(false);
 
   const openDemoModal = () => setIsDemoModalOpen(true);
   const closeDemoModal = () => setIsDemoModalOpen(false);
@@ -149,7 +147,7 @@ export default function App() {
       {/* CORE SIMULATOR SECTION */}
       <section className="bg-slate-950 pb-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NavigationHub onOpenSimulator={() => setIsSimulatorOpen(true)} />
+          <NavigationHub />
         </div>
       </section>
 
@@ -268,33 +266,6 @@ export default function App() {
       <AnimatePresence>
         {isDemoModalOpen && (
           <ContactForm isModal onClose={closeDemoModal} />
-        )}
-      </AnimatePresence>
-
-      {/* OVERLAY SIMULATOR MODAL */}
-      <AnimatePresence>
-        {isSimulatorOpen && (
-          <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm overflow-y-auto p-4 sm:p-6 md:p-10 flex items-center justify-center">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95, y: 15 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              transition={{ duration: 0.3 }}
-              className="w-full max-w-7xl bg-slate-900 border border-slate-800 rounded-sm shadow-2xl relative p-1 max-h-[95vh] overflow-y-auto"
-            >
-              {/* Close Button */}
-              <button
-                type="button"
-                onClick={() => setIsSimulatorOpen(false)}
-                className="absolute top-4 right-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-slate-800 text-slate-400 hover:text-white px-3 py-1.5 rounded-sm cursor-pointer z-50 font-mono text-[10px] font-bold uppercase transition-colors"
-              >
-                ✕ Cerrar Consola
-              </button>
-              <div className="p-4 sm:p-6 mt-4">
-                <TelemetrySimulator />
-              </div>
-            </motion.div>
-          </div>
         )}
       </AnimatePresence>
     </div>
